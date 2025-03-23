@@ -1,0 +1,14 @@
+{
+    "user": {
+      "name": "EJR",
+      "phone": "+91 9874563210",
+      "address": {
+        "street": "Kakkad",
+        "city": "Kannur",
+        "state": "Kerala",
+        "zip": "670001",
+        "country": "India"
+      }
+    }
+  }
+  

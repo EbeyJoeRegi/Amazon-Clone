@@ -1,0 +1,6 @@
+.navbar {
+    background-color: #151d26;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
