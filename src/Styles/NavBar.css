@@ -1,6 +1,210 @@
+/* NavBar.css */
 .navbar {
-    background-color: #151d26;
-    color: white;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  background-color: #131921;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Top */
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 5px 20px; /* Match bottom navbar padding */
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+/* Logo */
+.nav-logo img {
+  padding-top: 5px;
+  height: 40px;
+}
+
+/* Location */
+.nav-location {
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
+
+.nav-location-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-text-small {
+  font-size: 12px;
+  color: #cccccc;
+}
+
+.nav-text-bold {
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap; /* Ensures text never wraps to the next line */
+}
+
+/* Search Bar */
+.nav-search {
+  display: flex;
+  flex-grow: 1;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: center;
+  margin: 0 10px;
+  transition: max-width 0.3s ease-in-out;
+}
+
+.nav-search-category {
+  background: #e6e6e6;
+  border: none;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.nav-search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.nav-search-btn {
+  background: #febd69;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Language Selector */
+.nav-language {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.nav-flag {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.nav-lang-text {
+  font-size: 14px;
+}
+
+/* Account, Orders & Cart */
+.nav-account, .nav-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  white-space: nowrap; /* Prevents line breaks */
+}
+
+/* Cart */
+.nav-cart {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Keeps the icon and text together */
+  white-space: nowrap;
+}
+
+/* Bottom Navbar */
+.navbar-bottom {
+  display: flex;
+  background: #232f3e;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-item {
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar-top,
+.navbar-bottom {
+    max-width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1601px) {
+  .nav-search {
+      max-width: 12000px;  /* Search box increases to 1200px */
+  }
+}
+
+@media (max-width: 1440px) {
+  .nav-search {
+      max-width: 800px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-search {
+      max-width: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-search {
+      max-width: 600px;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-search {
+      max-width: 500px;
+  }
+  .nav-account, .nav-orders {
+      font-size: 12px; /* Reduces size slightly to fit */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-search {
+      max-width: 400px;
+  }
+  .nav-language {
+      display: none;
+  }
+  .nav-account, .nav-orders {
+      font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-search {
+      max-width: 300px;
+  }
+  .navbar-top {
+      flex-wrap: wrap;
+  }
+  .nav-location {
+      display: none;
+  }
+  .nav-account, .nav-orders {
+      font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-search {
+      max-width: 250px;
+  }
+  .nav-cart {
+      margin-right: 5px;
+  }
 }
