@@ -24,6 +24,7 @@
 
 /* Location */
 .nav-location {
+  margin-left: 10px;
   display: flex;
   align-items: center;
 }
@@ -39,6 +40,7 @@
 
 .nav-text-small {
   font-size: 12px;
+  font-weight: bold;
   color: #cccccc;
 }
 
@@ -64,9 +66,10 @@
 .nav-search-category {
   background: #e6e6e6;
   border: none;
-  padding: 10px;
+  padding: 10px 0px 10px 5px;
   border-right: 1px solid #ddd;
   font-size: 14px;
+  text-align: center;
 }
 
 .nav-search-input {

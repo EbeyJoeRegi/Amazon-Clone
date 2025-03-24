@@ -3,7 +3,6 @@ import userDetails from '../Data/userDetails.json';
 import { SiGooglemaps } from "react-icons/si";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
-import '../Styles/NavBar.css';
 
 const NavBar = () => {
     const { name, address } = userDetails.user;
@@ -19,7 +18,7 @@ const NavBar = () => {
 
                 {/* Location */}
                 <div className="nav-location">
-                    <SiGooglemaps size={25} className="location-icon" />
+                    <SiGooglemaps size={20} className="location-icon" />
                     <div className="nav-location-text">
                         <span className="nav-text-small">Deliver to {name}</span>
                         <span className="nav-text-bold">{address.street}, {address.zip}</span>
@@ -66,15 +65,6 @@ const NavBar = () => {
                 </div>
             </div>
 
-            {/* Bottom Navbar */}
-            <div className="navbar-bottom">
-                <span className="nav-item">All</span>
-                <span className="nav-item">Today's Deals</span>
-                <span className="nav-item">Customer Service</span>
-                <span className="nav-item">Gift Cards</span>
-                <span className="nav-item">Registry</span>
-                <span className="nav-item">Sell</span>
-            </div>
         </nav>
     );
 }

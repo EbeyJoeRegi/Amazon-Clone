@@ -1,4 +1,4 @@
-import NavBar from "./Components/navbar"
+import Home from "./Components/Home"
 import Banner from "./Components/banner"
 import CartPage from "./Components/CartPage"
 import CheckoutPage from "./Components/CheckoutPage"
@@ -15,7 +15,8 @@ function App() {
 
   return (
     <div>
-      <NavBar />     
+      <Home />    
+      <Banner /> 
     </div>
   )
 }
