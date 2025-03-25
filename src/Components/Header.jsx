@@ -5,7 +5,7 @@ const Header = () => {
     const { name } = userDetails.user;
 
     return (
-        <nav className="navbar">
+        <nav className="header">
             <div className="navbar-bottom">
                 <span className="nav-item">
                     <FaBars className="hamburger-icon" /> All
@@ -23,6 +23,11 @@ const Header = () => {
                 <span className="nav-item">Health, Household & Personal Care</span>
                 <span className="nav-item">Browsing History</span>
                 <span className="nav-item">{name}'s Amazon.in</span>
+                <span className="nav-item">Home Improvement</span>
+                <span className="nav-item">Subscribe & Save</span>
+                <span className="nav-item">Gift Ideas</span>
+                <span className="nav-item">Books</span>
+                <span className="nav-item">Toys & Games</span>
             </div>
         </nav>
     )

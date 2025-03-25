@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import banners from "../data/banner.json";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import ProductGrid from "./ProductGrid"
+import { IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
 import "../styles/Banner.css";
 
 const Banner = () => {
@@ -23,12 +24,16 @@ const Banner = () => {
 
     return (
         <div className="banner-container">
-            <button className="arrow left" onClick={prevSlide}><FaArrowLeft /></button>
+            <button className="arrow left" onClick={prevSlide}><IoIosArrowBack /></button>
             <div className="banner-wrapper">
                 <img src={banners[currentIndex].image} alt={`Banner ${currentIndex + 1}`} className="banner-image" />
                 <div className="fade-overlay"></div>
             </div>
-            <button className="arrow right" onClick={nextSlide}><FaArrowRight /></button>
+            <button className="arrow right" onClick={nextSlide}><IoIosArrowForward /></button>
+             {/* Product Grid Positioned Below the Banner */}
+             <div className="product-grid-overlay">
+                <ProductGrid />
+            </div>
         </div>
     );
 };

@@ -1,0 +1,97 @@
+{"mainGrids": [
+    {
+      "title": "Electronics",
+      "image": "public/images/Grid/main Grid/M1.jpg",
+      "link": "/electronics"
+    },
+    {
+      "title": "Fashion",
+      "image": "public/images/Grid/main Grid/M2.jpg",
+      "link": "/fashion"
+    },
+    {
+      "title": "Home & Kitchen",
+      "image": "public/images/Grid/main Grid/M3.jpg",
+      "link": "/home"
+    },
+    {
+      "title": "Toys & Games",
+      "image": "public/images/Grid/main Grid/M4.jpg",
+      "link": "/toys"
+    }
+  ],
+    "categories": [
+      {
+        "title": "Best Sellers in Electronics",
+        "products": [
+          {
+            "name": "Smartphone",
+            "image": "public/images/Grid/Grid/G1.jpg",
+            "link": "/product/smartphone"
+          },
+          {
+            "name": "Laptop",
+            "image": "public/images/Grid/Grid/G2.jpg",
+            "link": "/product/laptop"
+          },
+          {
+            "name": "Smartwatch",
+            "image": "public/images/Grid/Grid/G3.jpg",
+            "link": "/product/smartwatch"
+          },
+          {
+            "name": "Headphones",
+            "image": "public/images/Grid/Grid/G4.jpg",
+            "link": "/product/headphones"
+          }
+        ],
+        "seeMore": "See More"
+      },
+      {
+        "title": "Top Deals on Home Appliances",
+        "products": [
+          {
+            "name": "Air Fryer",
+            "image": "public/images/Grid/Grid/G5.jpg",
+            "link": "/product/airfryer"
+          },
+          {
+            "name": "Vacuum Cleaner",
+            "image": "public/images/Grid/Grid/G6.jpg",
+            "link": "/product/vacuum"
+          },
+          {
+            "name": "Microwave Oven",
+            "image": "public/images/Grid/Grid/G7.jpg",
+            "link": "/product/microwave"
+          },
+          {
+            "name": "Refrigerator",
+            "image": "public/images/Grid/Grid/G8.jpg",
+            "link": "/product/fridge"
+          }
+        ],
+        "seeMore": "Explore All"
+      },
+      {
+        "title": "Trending Fashion Picks",
+        "products": [
+          { "name": "Men's Sneakers", "image": "public/images/Grid/Grid/G9.jpg", "link": "/product/sneakers" },
+          { "name": "Women's Handbag", "image": "public/images/Grid/Grid/G10.jpg","link": "/product/handbag" },
+          { "name": "Sunglasses", "image": "public/images/Grid/Grid/G11.jpg", "link": "/product/sunglasses" },
+          { "name": "Watch", "image": "public/images/Grid/Grid/G12.jpg", "link": "/product/watch" }
+        ],
+        "seeMore": "See more"
+      },
+      {
+        "title": "Must-Have Kitchen Essentials",
+        "products": [
+          { "name": "Coffee Maker", "image": "public/images/Grid/Grid/G13.jpg", "link": "/product/coffeemaker" },
+          { "name": "Blender", "image":"public/images/Grid/Grid/G14.jpg", "link": "/product/blender" },
+          { "name": "Toaster", "image": "public/images/Grid/Grid/G15.jpg", "link": "/product/toaster" },
+          { "name": "Knife Set", "image": "public/images/Grid/Grid/G16.jpg","link": "/product/knifeset" }
+        ],
+        "seeMore": "See all offers"
+      }
+    ]
+  }
