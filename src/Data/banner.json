@@ -1,8 +1,8 @@
 [
-    { "id": 1, "image": "public/images/Banner/B1.jpg" },
-    { "id": 2, "image": "public/images/Banner/B2.jpg" },
-    { "id": 3, "image": "public/images/Banner/B3.jpg" },
-    { "id": 4, "image": "public/images/Banner/B4.jpg" },
-    { "id": 5, "image": "public/images/Banner/B5.jpg" },
-    { "id": 6, "image": "public/images/Banner/B6.jpg" }
+    { "id": 1, "image": "images/Banner/B1.jpg" },
+    { "id": 2, "image": "images/Banner/B2.jpg" },
+    { "id": 3, "image": "images/Banner/B3.jpg" },
+    { "id": 4, "image": "images/Banner/B4.jpg" },
+    { "id": 5, "image": "images/Banner/B5.jpg" },
+    { "id": 6, "image": "images/Banner/B6.jpg" }
 ]

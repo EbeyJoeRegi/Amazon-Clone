@@ -3,6 +3,7 @@ import userDetails from '../Data/userDetails.json';
 import { SiGooglemaps } from "react-icons/si";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { IoMdArrowDropdown } from "react-icons/io";
+import '../Styles/NavBar.css';
 
 const NavBar = () => {
     const { name, address } = userDetails.user;

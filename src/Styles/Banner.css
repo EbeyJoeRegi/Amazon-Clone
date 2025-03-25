@@ -29,7 +29,7 @@
 
 .arrow {
     position: absolute;
-    top: 5%; /* 1/4th from the top */
+    top: 7.5%; /* 1/4th from the top */
     background: none;
     border: none;
     color: white;
@@ -53,8 +53,31 @@
 /* Overlay ProductGrid at 60% of the banner height */
 .product-grid-overlay {
     position: absolute;
-    top: 225px; /* Start from 60% of banner height */
+    top: 20%; /* Start from 60% of banner height */
     left: 0;
     width: 100%;
     z-index: 10; /* Ensure it's above the banner */
 }
+
+/* Medium Screens (Max Width 1024px) */
+@media (max-width: 1024px) {
+    .product-grid-overlay {
+        top: 15%; /* Move higher on smaller screens */
+    }
+
+    .arrow {
+        top: 5%; /* Adjust arrow higher */
+    }
+}
+
+/* Tablet Screens (Max Width 768px) */
+@media (max-width: 768px) {
+    .product-grid-overlay {
+        top: 10%; /* Further move up on smaller screens */
+    }
+
+    .arrow {
+        top:2.5%; /* Adjust arrow higher */
+    }
+}
+

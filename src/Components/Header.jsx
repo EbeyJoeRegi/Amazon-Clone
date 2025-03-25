@@ -1,5 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import userDetails from '../Data/userDetails.json'; 
+import '../Styles/NavBar.css';
 
 const Header = () => {    
     const { name } = userDetails.user;

@@ -104,7 +104,6 @@
 }
 
 /* Product Name - Single Line with Ellipsis */
-/* Product Name - Clickable but Not a Hyperlink */
 .product-name {
     font-size: 14px;
     margin: 10px 0;
@@ -132,3 +131,49 @@
 .see-more-link:hover {
     text-decoration: underline;
 }
+
+/* 3 Grids (Between 1024px & 850px) */
+@media (max-width: 1024px) {
+    .main-grid-row .main-grid:nth-child(4) {
+        display: none;
+    }
+
+    .main-grid {
+        min-width: 280px;
+        max-width: 300px;
+    }
+
+    .product-grid .row .product-category:nth-child(4) {
+        display: none;
+    }
+
+    .product-category {
+        min-width: 280px;
+        max-width: 300px;
+    }
+}
+
+
+/* 2 Grids (Between 768px & 600px) */
+@media (max-width: 768px) {
+    .main-grid-row .main-grid:nth-child(3),
+    .main-grid-row .main-grid:nth-child(4) {
+        display: none;
+    }
+    
+    .product-grid .row .product-category:nth-child(3),
+    .product-grid .row .product-category:nth-child(4) {
+        display: none;
+    }
+
+    .main-grid, .product-category {
+        min-width: 250px;
+        max-width: 270px;
+        height: 320px;
+    }
+    
+    .see-more-link{        
+    margin-top: 0px;
+    }
+}
+

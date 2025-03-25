@@ -1,4 +1,5 @@
-import Home from "./Components/Home"
+import NavBar from "./Components/navbar"
+import Header from "./Components/Header"
 import Banner from "./Components/banner"
 import CartPage from "./Components/CartPage"
 import CheckoutPage from "./Components/CheckoutPage"
@@ -14,8 +15,9 @@ function App() {
 
 
   return (
-    <div>
-      <Home />    
+    <div>     
+      <NavBar />
+      <Header />  
       <Banner />
     </div>
   )
