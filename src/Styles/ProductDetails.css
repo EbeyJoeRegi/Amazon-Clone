@@ -1,0 +1,408 @@
+/* Page Layout */
+.product-page {
+  background-color: white;
+  padding-top: 20px;
+}
+
+.product-container {
+  display: flex;
+  max-width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  gap: 20px;
+}
+
+/* Left Section (40% Width) */
+.left-section {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  flex-direction: column;
+  position: relative; /* Needed for absolute positioning */
+}
+
+/* Thumbnails Positioned Lower */
+.thumbnail-list {
+  display: flex;
+  flex-direction: column;
+  top:25%;
+  gap: 8px;
+  align-items: center;
+  position: absolute;
+  left: 0; /* Keeps them left-aligned */
+}
+
+/* Thumbnail Styles */
+.thumbnail {
+  width: 60px;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.thumbnail.active {
+  border: 2px solid #FF9900;
+}
+
+/* Enlarged Main Image */
+.main-image {
+  padding-left: 25px;
+  width: 75%;
+  text-align: center;
+  margin-top: 100px; /* Gives some spacing */
+}
+
+.main-image img {
+  width: 120%;
+  max-height: 450px;
+  object-fit: contain;
+}
+
+/* Right Section (60% Width) */
+.middle-section {
+margin-top: 10px;
+width: 60%;
+}
+
+/* Title & Brand */
+.product-title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.brand {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Limited Time Deal */
+.limited-deal {
+  background: rgb(229, 0, 65);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* Pricing */
+.price-section {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.discount, .discounted-price {
+  display: inline-block;
+}
+
+.discount {
+  color: rgb(229, 0, 65);
+  font-size: 18px;
+}
+
+.discounted-price {
+  color: #000000;
+  font-size: 22px;
+  margin-left: 5px;
+}
+
+.original-price {
+  font-size: 16px;
+  color: #555;
+  display: block;  /* Ensures it's on a new line */
+}
+
+.tax-info {  
+  font-size: 13px;
+  color: gray;
+  display: block;  /* Ensures it's on a new line */
+}
+
+.emi-info {  
+  font-size: 15px;
+}
+
+
+/* Offers Section */
+.offers-header {
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.offers-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.offers-heading {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Offers Carousel */
+.offers-carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.offers-container {
+  display: flex;
+  overflow-x: hidden;  /* Hide scrollbar */
+  scroll-behavior: smooth;
+  width: calc(160px * 4); /* Show only 4 boxes at a time */
+  gap: 10px;
+  white-space: nowrap;
+}
+
+/* Offer Box - Fixed Width */
+.offer-box {
+  width: 150px; /* Fixed width */
+  height: auto;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  flex-shrink: 0;
+  overflow-wrap: break-word; /* Allow text to wrap */
+}
+
+/* Multiline Offer Text */
+.offer-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.offer-text {
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Arrow Buttons */
+.PDarrow {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  margin: 0 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.PDarrow:hover {
+  color: #ff9900;
+}
+
+.PDleft-arrow {
+  margin-right: 5px;
+}
+
+.PDright-arrow {
+  margin-left: 5px;
+}
+
+
+/* Icons Row */
+.info-icons-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Hide scrollbar */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+
+/* Scrollable Icons Row */
+.info-icons {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Individual Icon Box */
+.info-item {
+  min-width: 100px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Icons */
+.info-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Text Below Icons */
+.info-item p {
+  font-size: 12px;
+  color: #004B9A;
+  width: 100px; /* Match icon width */
+  margin: 5px auto 0;
+  word-wrap: break-word; /* Break long words */
+  white-space: normal; /* Allow text to wrap */
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 18px;
+  color: black;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buy-now, .add-to-cart {
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-now {
+  background: #FFA41C;
+  color: white;
+}
+
+.add-to-cart {
+  background: #FFD814;
+  color: black;
+}
+
+/* Right Section (Extreme Right - Add to Cart Box) */
+.right-section {
+  width: 20%;
+}
+
+.purchase-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+}
+
+.exchange-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.exchange-option input {
+  margin-top: 5px;
+}
+
+.exchange-text {
+  font-size: 14px;
+}
+
+.final-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #B12704;
+}
+
+.free-delivery {
+  color: green;
+  font-size: 14px;
+}
+
+.fast-delivery {
+  font-size: 14px;
+}
+
+.stock-status {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.add-to-cart, .buy-now {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-to-cart {
+  background: #FFD814;
+  border: none;
+}
+
+.buy-now {
+  background: #FFA41C;
+  color: white;
+  border: none;
+}
+
+.gift-option {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: -10px 0;
+}
+
+.star {
+  font-size: 20px;
+}
+
+.full-star {
+  color: #FFD700; /* Gold color for filled stars */
+}
+
+.half-star {
+  color: #FFD700;
+}
+
+.empty-star {
+  color: #ccc; /* Gray for empty stars */
+}
+
+.rating-value {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 2px;
+}

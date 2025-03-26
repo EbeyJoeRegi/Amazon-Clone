@@ -115,11 +115,27 @@
 }
 
 /* Cart */
+.no-link-style {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherit the text color from the parent element */
+}
+
 .nav-cart {
   display: flex;
   align-items: center;
-  gap: 5px; /* Keeps the icon and text together */
+  gap: 5px;
   white-space: nowrap;
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  color: rgb(255, 77, 0);
+  border-radius: 50%;
+  padding: 0px 9px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* Bottom Navbar */
@@ -224,3 +240,137 @@
   margin-top: -5px;
   padding-right: 1px;
 }
+
+@media (max-width: 1000px) {
+  .nav-orders,
+  .nav-cart {
+      display: none;
+  }
+}
+
+@media (max-width: 877px) {
+  /* Common styling for all 4 navbars */
+  .navbar-top,
+  .nav-search-container,
+  .navbar-bottom,
+  .nav-location-bar {
+      background-color: #232f3e; /* Amazon blue */
+      color: white;
+      width: 100%;
+  }
+
+  /* 1st Navbar: Top section (Hamburger, Logo, Hi {name}, Cart) */
+  .navbar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px 15px; */
+  }
+
+  .nav-left {
+      display: flex;
+      align-items: center;
+  }
+
+  .nav-right {
+      display: flex;
+      align-items: center;
+  }
+
+  .nav-logo {
+      display: flex;
+      align-items: center;
+  }
+
+  .hamburger-icon {
+      font-size: 22px;
+      margin-right: 10px;
+      cursor: pointer;
+  }
+
+  .nav-user {
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 15px; /* Space between Hi {name} and Cart */
+  }
+
+  .nav-cart {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+  }
+
+  .cart-text {
+      margin-left: 5px;
+      font-weight: bold;
+  }
+
+  /* 2nd Navbar: Search Bar */
+  .nav-search-container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    background-color: #232f3e; /* Amazon blue */
+}
+
+.nav-search {
+    display: flex;
+    max-width: 1000px;
+    background-color: white; /* Search box is white */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    align-items: center; /* Ensures proper alignment */
+}
+
+.nav-search-category {
+    height: 100%; /* Match the height of the search box */
+    padding: 0 10px;
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.nav-search-btn {
+    background-color: #febd69;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensures the button matches the search box height */
+}
+
+  /* 3rd Navbar: Bottom navigation */
+  .navbar-bottom {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
+  }
+
+  /* 4th Navbar: Delivery location */
+  .nav-location-bar {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .location-icon {
+      margin-right: 5px;
+  }
+}
+

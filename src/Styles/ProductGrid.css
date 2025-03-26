@@ -155,7 +155,7 @@
 
 
 /* 2 Grids (Between 768px & 600px) */
-@media (max-width: 768px) {
+@media (max-width: 877px) {
     .main-grid-row .main-grid:nth-child(3),
     .main-grid-row .main-grid:nth-child(4) {
         display: none;
@@ -174,6 +174,45 @@
     
     .see-more-link{        
     margin-top: 0px;
+    }
+}
+
+/* 1 Grid from Each Type (Below 468px) */
+@media (max-width: 468px) {
+    .main-grid-row {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Show only the first Main Grid, hide others */
+    .main-grid-row .main-grid:nth-child(n+2) {
+        display: none;
+    }
+
+    .main-grid {
+        width: 90%;
+        min-width: 250px;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .product-grid .row {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Show only the first Product Category, hide others */
+    .product-grid .row .product-category:nth-child(n+2) {
+        display: none;
+    }
+
+    .product-category {
+        width: 90%;
+        min-width: 250px;
+        max-width: 300px;
+        height: auto;
     }
 }
 

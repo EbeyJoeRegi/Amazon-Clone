@@ -1,26 +1,42 @@
-import NavBar from "./Components/navbar"
-import Header from "./Components/Header"
-import Banner from "./Components/banner"
-import CartPage from "./Components/CartPage"
-import CheckoutPage from "./Components/CheckoutPage"
-import ProductCard from "./Components/ProductCard"
-import ProductDetail from "./Components/ProductDetail"
-import SignIn from "./Components/signin"
-import SignUp from "./Components/signup"
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
-import './Styles/style.css'
+import NavBar from "./Components/navbar";
+import Banner from "./Components/banner";
+import { CartProvider } from "./context/CartContext";
+import CartPage from "./Components/CartPage";
+import CheckoutPage from "./Components/CheckoutPage";
+import ProductCard from "./Components/ProductCard";
+import ProductDetails from "./Components/ProductDetail";
+import SignIn from "./Components/signin";
+import SignUp from "./Components/signup";
 
-import { BrowserRouter, Routes, Route,  } from "react-router-dom";
-function App() {
+import './Styles/style.css';
 
+function Layout() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
-    <div>     
+    <>
       <NavBar />
-      <Header />  
-      <Banner />
-    </div>
-  )
+      {isHomePage && <Banner />}
+      <Routes>
+        <Route path="/" element={<ProductCard />} />
+        <Route path="/product/:categoryId/:productId" element={<ProductDetails />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <CartProvider>
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+    </CartProvider>
+  );
+}
+
+export default App;

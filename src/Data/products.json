@@ -1,21 +1,21 @@
 {"mainGrids": [
     {
-      "title": "Electronics",
+      "title": "Makeup products",
       "image": "images/Grid/main Grid/M1.jpg",
       "link": "/electronics"
     },
     {
-      "title": "Fashion",
+      "title": "New looks for the new season",
       "image": "images/Grid/main Grid/M2.jpg",
       "link": "/fashion"
     },
     {
-      "title": "Home & Kitchen",
+      "title": "Do up your home",
       "image": "images/Grid/main Grid/M3.jpg",
       "link": "/home"
     },
     {
-      "title": "Toys & Games",
+      "title": "Smart gadgets by Amazon",
       "image": "images/Grid/main Grid/M4.jpg",
       "link": "/toys"
     }

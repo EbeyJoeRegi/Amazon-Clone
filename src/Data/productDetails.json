@@ -1,0 +1,331 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "mobile",
+      "heading": "Upto 50% off on Mobile Phones",
+      "products": [
+        {
+          "id": 101,
+          "name": "Samsung Galaxy S23",
+          "price": 999.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Samsung",
+          "rating": 4.5
+        },
+        {
+          "id": 102,
+          "name": "Apple iPhone 14",
+          "price": 1099.99,
+          "discount": 5,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Apple",
+          "rating": 4.8
+        },
+        {
+          "id": 103,
+          "name": "Google Pixel 7",
+          "price": 899.99,
+          "discount": 12,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Google",
+          "rating": 4.2
+        },
+        {
+          "id": 104,
+          "name": "OnePlus 11",
+          "price": 799.99,
+          "discount": 8,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "OnePlus",
+          "rating": 4.3
+        },
+        {
+          "id": 105,
+          "name": "Xiaomi Mi 13",
+          "price": 749.99,
+          "discount": 15,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Xiaomi",
+          "rating": 4.4
+        },
+        {
+          "id": 106,
+          "name": "Sony Xperia 1 IV",
+          "price": 1199.99,
+          "discount": 7,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Sony",
+          "rating": 4.1
+        },
+        {
+          "id": 107,
+          "name": "Motorola Edge 40",
+          "price": 699.99,
+          "discount": 5,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Motorola",
+          "rating": 4.0
+        },
+        {
+          "id": 108,
+          "name": "Oppo Find X5 Pro",
+          "price": 999.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Oppo",
+          "rating": 4.5
+        },
+        {
+          "id": 109,
+          "name": "Asus Zenfone 9",
+          "price": 849.99,
+          "discount": 6,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Asus",
+          "rating": 4.2
+        },
+        {
+          "id": 110,
+          "name": "Realme GT 2 Pro",
+          "price": 899.99,
+          "discount": 12,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Realme",
+          "rating": 4.3
+        },
+        {
+          "id": 111,
+          "name": "Vivo X80 Pro",
+          "price": 1099.99,
+          "discount": 9,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Vivo",
+          "rating": 4.6
+        },
+        {
+          "id": 112,
+          "name": "Nokia X30",
+          "price": 799.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Nokia",
+          "rating": 4.0
+        },
+        {
+          "id": 113,
+          "name": "Huawei P50 Pro",
+          "price": 1199.99,
+          "discount": 15,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Huawei",
+          "rating": 4.3
+        },
+        {
+          "id": 114,
+          "name": "LG Velvet",
+          "price": 649.99,
+          "discount": 18,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "LG",
+          "rating": 3.9
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "tv",
+      "heading": "Upto 20% off on Televisions",
+      "products": [
+        {
+          "id": 201,
+          "name": "LG OLED55CXPUA Alexa Built-In CX 55",
+          "price": 1499.99,
+          "discount": 15,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "LG",
+          "rating": 4.7
+        },
+        {
+          "id": 202,
+          "name": "Samsung QLED 4K UHD",
+          "price": 1199.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Samsung",
+          "rating": 4.3
+        },
+        {
+          "id": 203,
+          "name": "Sony Bravia 65 Inch",
+          "price": 1599.99,
+          "discount": 20,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Sony",
+          "rating": 4.6
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "home products",
+      "heading": "Upto 15% off on Home Products",
+      "products": [
+        {
+          "id": 301,
+          "name": "Dyson V11 Torque Drive Cordless Vacuum Cleaner",
+          "price": 599.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Dyson",
+          "rating": 4.8
+        },
+        {
+          "id": 302,
+          "name": "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+          "price": 89.99,
+          "discount": 15,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Instant Pot",
+          "rating": 4.5
+        },
+        {
+          "id": 303,
+          "name": "iRobot Roomba 675 Robot Vacuum",
+          "price": 249.99,
+          "discount": 8,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "iRobot",
+          "rating": 4.2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "makeup products",
+      "heading": "Upto 20% off on Makeup Products",
+      "products": [
+        {
+          "id": 401,
+          "name": "Maybelline New York Fit Me Foundation",
+          "price": 7.99,
+          "discount": 5,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "Maybelline",
+          "rating": 4.0
+        },
+        {
+          "id": 402,
+          "name": "MAC Cosmetics Lipstick",
+          "price": 19.99,
+          "discount": 10,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "MAC Cosmetics",
+          "rating": 4.7
+        },
+        {
+          "id": 403,
+          "name": "L'Oréal Paris Voluminous Mascara",
+          "price": 8.99,
+          "discount": 12,
+          "loc": [
+            "/images/ProductDetails/Mobile/M1.jpg",
+            "/images/ProductDetails/Mobile/M2.jpg",
+            "/images/ProductDetails/Mobile/M3.jpg"
+          ],
+          "brand": "L'Oréal",
+          "rating": 4.3
+        }
+      ]
+    }
+  ]
+}
