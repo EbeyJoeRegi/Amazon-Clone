@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import banners from "../Data/banner.json";
 import ProductGrid from "./ProductGrid"
 import { IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
-import "../styles/Banner.css";
+import "../Styles/Banner.css";
 
 const Banner = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
