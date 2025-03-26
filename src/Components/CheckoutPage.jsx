@@ -37,7 +37,8 @@ const CheckoutPage = () => {
         <div className="checkout-container">
             {/* Navbar */}
             <div className="checkout-navbar">
-            <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" className="amazon-logo" />
+            <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" className="amazon-logo" onClick={() => navigate("/")} 
+                style={{ cursor: "pointer" }} />
                 <h2>Checkout</h2>
                 <h2 className="secure-icon">🔒</h2>
             </div>

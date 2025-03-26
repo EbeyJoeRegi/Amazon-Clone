@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -10,6 +10,16 @@ import { CartContext } from "../context/CartContext";
 const MainNavbar = () => {
     const { name, address } = userDetails.user;
     const { getTotalCartCount } = useContext(CartContext);
+    const [searchQuery, setSearchQuery] = useState("");
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchQuery.trim().length > 0) {  // Ensure query is not empty
+            navigate(`/search-results/${encodeURIComponent(searchQuery.trim())}`);
+        }
+    };
+
     return (
         <nav className="navbar">
             <div className="navbar-top">
@@ -23,18 +33,18 @@ const MainNavbar = () => {
                         <span className="nav-text-bold">{address.street}, {address.zip}</span>
                     </div>
                 </div>
-                <div className="nav-search">
-                    <select className="nav-search-category">
-                        <option>All</option>
-                        <option>Electronics</option>
-                        <option>Clothing</option>
-                        <option>Books</option>
-                    </select>
-                    <input type="search" placeholder="Search Amazon.in" className="nav-search-input" />
-                    <button className="nav-search-btn">
+                <form className="nav-search" onSubmit={handleSearch}>
+                    <input 
+                        type="search" 
+                        placeholder="Search Amazon.in" 
+                        className="nav-search-input" 
+                        value={searchQuery} 
+                        onChange={(e) => setSearchQuery(e.target.value)} 
+                    />
+                    <button className="nav-search-btn" type="submit">
                         <FaSearch />
                     </button>
-                </div>
+                </form>
                 <div className="nav-language">
                     <img src="/images/Navbar/india-flag.jpg" alt="India Flag" className="nav-flag" />
                     <span className="nav-lang-text">EN</span>
@@ -55,9 +65,9 @@ const MainNavbar = () => {
                         <span className="cart-text">cart</span>
                     </div>
                 </Link>
-
             </div>
         </nav>
     );
 };
+
 export default MainNavbar;

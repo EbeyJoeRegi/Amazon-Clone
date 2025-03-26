@@ -1,0 +1,246 @@
+/* Container */
+.search-results-container {
+    display: flex;
+    width: auto;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  /* Left Column: Filters */
+  .search-results-filters {
+    width: 20%;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .search-results-filters h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .brand-filter-container {
+    display: flex;
+    flex-direction: column; /* Stack brand-filter rows */
+    gap: 5px; /* Space between each brand */
+  }
+  
+  .brand-filter-row {
+    display: flex;
+    align-items: center; /* Aligns text and checkbox in a row */
+    justify-content: space-between; /* Spaces brand name and checkbox */
+    width: 80%; /* Ensures full width for alignment */
+  }
+  
+  .brand-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .brand-checkbox {
+    transform: scale(1.2); /* Slightly larger checkbox */
+    cursor: pointer;
+  }
+
+  .search-results-filters select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Right Column: Product List */
+  .search-results-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Product Card */
+  .search-results-card {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .search-results-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Image Section */
+  .search-results-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-results-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Product Info */
+  .search-results-info {
+    flex: 3;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .search-results-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .search-results-info p {
+    font-size: 14px;
+    margin: 2px 0;
+  }
+  
+  .search-results-rating {
+    color: #ffa41c;
+    font-size: 14px;
+  }
+  
+  .search-results-deal-badge {
+    background-color: #cc0c39;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  /* Pricing */
+  .search-results-disc {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .search-results-price{
+    font-size: 14px;
+    color: #555;
+    text-decoration: line-through;
+    margin-left: 5px;
+  }
+  
+  .search-results-discount {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* Prime and Delivery */
+  .search-results-prime {
+    color: #0073b1;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-results-delivery {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Add to Cart Button */
+  .search-results-add-to-cart {
+    background-color: #ffd814;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    max-width: 120px;
+  }
+  
+  .search-results-add-to-cart:hover {
+    background-color: #f7ca00;
+  }
+  
+  /* Star Rating */
+.search-results-rating {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.search-results-stars {
+  display: flex;
+  gap: 2px;
+  color: #d5d5d5; 
+}
+
+.search-results-rating span{
+  margin-top: 2px;
+}
+
+.search-results-star.filled {
+  color: #ffa41c; /* Yellow for filled stars */
+}
+
+/* ✅ RESPONSIVE DESIGN */
+
+/* Mobile Phones (max-width: 768px) */
+@media (max-width: 768px) {
+    .search-results-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-results-filters {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-results-list {
+        width: 100%;
+    }
+
+    .search-results-card {
+        flex-direction: column; /* Stack image & details */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .search-results-image img {
+        width: 100px; /* Adjust image size */
+    }
+
+    .search-results-info {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .search-results-disc {
+        font-size: 22px;
+    }
+
+    .search-results-add-to-cart {
+        width: 100%;
+        max-width: none;
+    }
+}
