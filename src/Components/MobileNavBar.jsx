@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import userDetails from "../Data/userDetails.json";
 import { CartContext } from "../context/CartContext";
@@ -15,7 +15,6 @@ const MobileNavBar = () => {
         <>
             <div className="navbar-top">
                 <div className="nav-left">
-                    <FaBars className="hamburger-icon" />
                     <a href="/" className="nav-logo">
                         <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" />
                     </a>
