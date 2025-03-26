@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import banners from "../data/banner.json";
+import banners from "../Data/banner.json";
 import ProductGrid from "./ProductGrid"
 import { IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
 import "../styles/Banner.css";
