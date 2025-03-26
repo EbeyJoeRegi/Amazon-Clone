@@ -4,7 +4,7 @@ import { CartContext } from "../context/CartContext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import productData from "../Data/productDetails.json";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "../styles/ProductDetails.css";
+import "../Styles/ProductDetails.css";
 import { LuMapPin } from "react-icons/lu";
 import userDetails from "../Data/userDetails.json";
 

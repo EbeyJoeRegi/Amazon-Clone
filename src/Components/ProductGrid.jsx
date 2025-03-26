@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Styles/ProductGrid.css";
-import productsData from "../data/products.json"; // ✅ Import JSON directly
+import productsData from "../Data/products.json";
 
 const ProductGrid = () => {
     const {mainGrids, categories } = productsData;
