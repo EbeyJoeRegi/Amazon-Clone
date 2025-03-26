@@ -6,6 +6,7 @@ import productData from "../Data/productDetails.json";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../styles/ProductDetails.css";
 import { LuMapPin } from "react-icons/lu";
+import userDetails from "../Data/userDetails.json";
 
 const icons = [
   { src: "/icons/Replacement.png", alt: "Replacement", text: "7 days service centre replacement" },
@@ -47,6 +48,7 @@ const offers = [
 
 
 const ProductDetails = () => {
+  const { address } = userDetails.user;
   const { categoryId, productId } = useParams();
   const { addToCart } = useContext(CartContext);
 
@@ -54,7 +56,6 @@ const ProductDetails = () => {
   const product = category?.products.find((prod) => prod.id.toString() === productId);
 
   const [selectedImage, setSelectedImage] = useState(product?.loc[0]);
-  const [exchangeSelected, setExchangeSelected] = useState(false);
 
   const offersContainerRef = React.useRef(null);
 
@@ -164,63 +165,59 @@ const ProductDetails = () => {
         {/* Right Section (Extreme Right - Add to Cart) */}
         <div className="right-section">
           <div className="purchase-box">
-            <label className="exchange-option">
-              <input
-                type="radio"
-                name="exchange"
-                onChange={() => setExchangeSelected(true)}
-              />
-              <span className="exchange-text">
-                <strong>Without Offer</strong>
-                <br /> ₹{product.price.toFixed(2)}
-              </span>
-            </label>
+            <p className="price">
+              <span className="final-price">₹{discountedPrice}</span>
+              <s className="original-price"> ₹{product.price.toFixed(2)}</s>
+            </p>
 
-            <label className="exchange-option">
-              <input
-                type="radio"
-                name="exchange"
-                defaultChecked
-                onChange={() => setExchangeSelected(false)}
-              />
-              <span className="exchange-text">
-                <strong>with Offer</strong>
-                <br /> <span className="final-price">₹{discountedPrice}</span> <s className="original-price">₹{product.price.toFixed(2)}</s>
-              </span>
-            </label>
 
-            <p className="free-delivery">FREE delivery <strong>Friday, 28 March.</strong></p>
+            <p className="free-delivery">
+              FREE delivery <strong>Friday, 11 April.</strong>
+            </p>
+
             <p className="fast-delivery">
-              Or fastest delivery <strong>Tomorrow, 27 March.</strong> Order within <span className="timer">13 hrs 50 mins</span>.
+              Or fastest delivery <strong>Monday, 7 March.</strong> Order within
+              <span className="timer"> 13 hrs 50 mins</span>.
             </p>
 
             <p className="location">
-              <LuMapPin /> Delivering to <strong>Kochi 682017</strong> - <a href="#">Update location</a>
+              <LuMapPin /> Delivering to <strong>{address.street} {address.zip}</strong>
             </p>
 
-            <p className="stock-status">✅ <span className="in-stock">In stock</span></p>
+            <p className="stock-status">In stock</p>
+            <div className="transaction">
+              <p>
+                <span className="label">Payment</span> <span className="value">Secure transaction</span>
+              </p>
+              <p>
+                <span className="label">Ships from</span> <span className="non-value">Amazon</span>
+              </p>
+              <p>
+                <span className="label">Sold by</span> <span className="value">Clicktech Retail Private Ltd</span>
+              </p>
+            </div>
 
-            <p className="secure">Payment: <a href="#">Secure transaction</a></p>
-            <p>Ships from: <strong>Amazon</strong></p>
-            <p>Sold by: <strong>Clicktech Retail Private Ltd</strong></p>
-
-            <label className="quantity">
-              Quantity:
-              <select>
-                {[...Array(10)].map((_, i) => (
-                  <option key={i + 1} value={i + 1}>{i + 1}</option>
-                ))}
-              </select>
-            </label>
+            <div className="quantity-container">
+              <label htmlFor="quantity" className="quantity-label">Quantity:</label>
+              <div className="custom-select">
+                <select id="quantity" className="quantity-select">
+                  {[...Array(10)].map((_, i) => (
+                    <option key={i + 1} value={i + 1}>{i + 1}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
 
             <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>
             <button className="buy-now">Buy Now</button>
 
             <label className="gift-option">
-              <input type="checkbox" /> Add gift options
+              <input type="checkbox" /><p className="gift">Add gift options</p>
             </label>
           </div>
         </div>
+
+
       </div>
     </div>
   );
