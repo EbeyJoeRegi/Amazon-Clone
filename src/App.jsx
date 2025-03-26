@@ -15,15 +15,17 @@ import './Styles/style.css';
 function Layout() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isCheckoutPage = location.pathname === "/checkout";
 
   return (
     <>
-      <NavBar />
+      {!isCheckoutPage && <NavBar />}
       {isHomePage && <Banner />}
       <Routes>
         <Route path="/" element={<ProductCard />} />
         <Route path="/product/:categoryId/:productId" element={<ProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </>
   );

@@ -1,5 +1,107 @@
-const CheckoutPage = ()=>{
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
+import userDetails from "../Data/userDetails.json";
+import "../Styles/CheckoutPage.css";
 
-}
+const CheckoutPage = () => {
+    const { cart, setCart } = useContext(CartContext);
+    const navigate = useNavigate();
+    const [orderPlaced, setOrderPlaced] = useState(false);
+
+    const { name, address, cards } = userDetails.user;
+
+    const totalAmount = cart.reduce(
+        (acc, item) => acc + (item.price * (1 - item.discount / 100)) * item.quantity,
+        0
+    ).toFixed(2);
+
+    const handlePayment = () => {
+        setOrderPlaced(true);
+        setCart([]); // Empty the cart
+        setTimeout(() => {
+            navigate("/");
+        }, 5000);
+    };
+
+    if (orderPlaced) {
+        return (
+            <div className="full-page-order">
+                <h2>🎉 Order Placed Successfully!</h2>
+                <p>Redirecting to home page...</p>
+            </div>
+        );
+    }
+
+    return (
+        <div className="checkout-container">
+            {/* Navbar */}
+            <div className="checkout-navbar">
+            <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" className="amazon-logo" />
+                <h2>Checkout</h2>
+                <h2 className="secure-icon">🔒</h2>
+            </div>
+
+            {/* Main Checkout Grid */}
+            <div className="checkout-grid">
+                {/* Left Column */}
+                <div className="left-column">
+                    {/* Delivery Address */}
+                    <div className="checkout-section address">
+                        <h4>1. Delivery Address</h4>
+                        <p>{name}</p>
+                        <p>{address.street}</p>
+                        <p>{address.city}, {address.state} - {address.zip}</p>
+                    </div>
+                    <hr />
+
+                    {/* Payment Method */}
+                    <div className="checkout-section">
+                        <h4>2. Select a Payment Method</h4>
+                        <div className="payment-methods">
+                            {cards.map((card, index) => (
+                                <div key={index}>
+                                    <input type="radio" id={`card-${index}`} name="payment" />
+                                    <label htmlFor={`card-${index}`}>
+                                        {card.bank} ending in {card.last4}
+                                    </label>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <hr />
+
+                    {/* Cart Items & Delivery */}
+                    <div className="checkout-section">
+                        <h4>3. Items & Delivery</h4>
+                        <p className="delivery-date">Estimated delivery date: {new Date().toDateString()}</p>
+                        <div className="cart-items">
+                            {cart.map((item) => (
+                                <div key={item.id} className="checkout-item">
+                                    <img src={item.loc[0]} alt={item.name} className="checkout-item-img" />
+                                    <p>{item.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Right Column */}
+                <div className="right-column">
+                    <div className="order-summary">
+                        <button className="payment-btn" onClick={handlePayment}>Use this payment method</button>
+                        <h3>Order Summary</h3>
+                        <div className="order-summary-details">
+                            <p><span>Items:</span> <span>₹{totalAmount}</span></p>
+                            <p><span>Delivery:</span> <span>--</span></p>
+                            <hr />
+                            <p><span>Order Total:</span> <span>₹{totalAmount}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default CheckoutPage;

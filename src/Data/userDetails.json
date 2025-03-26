@@ -1,14 +1,27 @@
 {
-    "user": {
-      "name": "EJR",
-      "phone": "+91 9874563210",
-      "address": {
-        "street": "Kakkad",
-        "city": "Kannur",
-        "state": "Kerala",
-        "zip": "670001",
-        "country": "India"
+  "user": {
+    "name": "EJR",
+    "phone": "+91 9874563210",
+    "address": {
+      "street": "Kakkad",
+      "city": "Kannur",
+      "state": "Kerala",
+      "zip": "670001",
+      "country": "India"
+    },
+    "cards": [
+      {
+        "bank": "State Bank of India",
+        "last4": "1111"
+      },
+      {
+        "bank": "HDFC Bank",
+        "last4": "2222"
+      },
+      {
+        "bank": "ICICI Bank",
+        "last4": "3333"
       }
-    }
+    ]
   }
-  
+}

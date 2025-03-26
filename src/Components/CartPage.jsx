@@ -2,23 +2,32 @@ import React, { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import "../Styles/CartPage.css";
 import { SlTrash } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 const CartPage = () => {
   const { cart, removeFromCart, updateQuantity } = useContext(CartContext);
+  const navigate = useNavigate(); 
 
   return (
     <div className="cart-page">
       <div className="cart-container">
-        {/* Header Section */}
-        <div className="cart-header">
-          <h2 className="cart-title">Shopping Cart</h2>
-          <p className="cart-price-header">Price</p>
-        </div>
-        <hr />
+        {cart.length !== 0 ? (
+          <div>
+            {/* Header Section */}
+            <div className="cart-header">
+              <h2 className="cart-title">Shopping Cart</h2>
+              <p className="cart-price-header">Price</p>
+            </div>
+            <hr />
+          </div>
+        ) : ""}
 
         {/* Cart Items */}
         {cart.length === 0 ? (
-          <p className="empty-cart">Your cart is empty.</p>
+          <div className="empty-cart-container">
+            <p className="empty-cart">Your cart is empty.</p>
+            <img src="/icons/cart empty.svg" alt="Empty Cart" className="empty-cart-image" />
+          </div>
         ) : (
           cart.map((item) => (
             <div key={item.id} className="cart-item">
@@ -63,17 +72,26 @@ const CartPage = () => {
           ))
         )}
 
-        {/* Subtotal Section */}
-        <div className="subtotal-section">
-          <p>Subtotal ({cart.length} items): <strong>₹{cart.reduce((acc, item) => acc + (item.price * (1 - item.discount / 100)) * item.quantity, 0).toFixed(2)}</strong></p>
-        </div>
+        {cart.length !== 0 ? (
+          <div>
+            {/* Subtotal Section */}
+            <div className="subtotal-section">
+              <p>Subtotal ({cart.length} items): <strong>₹{cart.reduce((acc, item) => acc + (item.price * (1 - item.discount / 100)) * item.quantity, 0).toFixed(2)}</strong></p>
+            </div>
+          </div>
+        ) : ""}
       </div>
-
+      {cart.length !== 0 ? (
+        <div>
       {/* Summary Section */}
       <div className="cart-summary">
         <p>Subtotal ({cart.length} items): <strong>₹{cart.reduce((acc, item) => acc + (item.price * (1 - item.discount / 100)) * item.quantity, 0).toFixed(2)}</strong></p>
-        <button className="checkout-btn">Proceed to Buy</button>
+        <button className="checkout-btn" onClick={() => navigate("/checkout")}>
+        Proceed to Buy
+      </button>
       </div>
+      </div>
+      ):""}
     </div>
   );
 };
