@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
+import { useParams, useNavigate } from "react-router-dom"; 
 import productData from "../Data/productDetails.json";
 import "../Styles/SearchResults.css";
 import { CartContext } from "../context/CartContext";
@@ -25,7 +25,7 @@ const renderStars = (rating) => {
 
 const SearchResults = () => {
   const { query } = useParams();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
   const [products, setProducts] = useState([]);
   const [sortOption, setSortOption] = useState("");
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -91,7 +91,6 @@ const SearchResults = () => {
     }
   };
 
-  // Function to handle navigation to product details page
   const goToProductDetails = (categoryId, productId) => {
     navigate(`/product/${categoryId}/${productId}`);
   };
@@ -107,7 +106,6 @@ const SearchResults = () => {
 
   return (
     <div className="search-results-container">
-      {/* Filters Section */}
       <div className="search-results-filters">
         <h3>Sort By</h3>
         <select onChange={(e) => handleSortChange(e.target.value)} value={sortOption}>
@@ -134,11 +132,9 @@ const SearchResults = () => {
         </div>
       </div>
 
-      {/* Product List */}
       <div className="search-results-list">
         {products.map((product) => (
           <div key={product.id} className="search-results-card">
-            {/* Left: Product Image - Click to Navigate */}
             <div
               className="search-results-image"
               onClick={() => goToProductDetails(queryID, product.id)}
@@ -147,17 +143,15 @@ const SearchResults = () => {
               <img src={product.loc[0]} alt={product.name} />
             </div>
 
-            {/* Right: Product Details */}
             <div className="search-results-info">
               <h3
                 className="search-results-title"
                 onClick={() => goToProductDetails(queryID, product.id)}
-                style={{ cursor: "pointer", color: "black" }} // Makes title clickable
+                style={{ cursor: "pointer", color: "black" }}
               >
                 {product.name}
               </h3>
 
-              {/* ⭐ Star Rating */}
               <div className="search-results-rating">
                 <div className="search-results-stars">{renderStars(product.rating)}</div>
                 <span> {product.rating}</span>

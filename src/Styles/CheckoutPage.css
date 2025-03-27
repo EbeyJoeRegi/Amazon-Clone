@@ -1,17 +1,15 @@
-/* General Styles */
 .checkout-container {
   width: 100%;
   margin: auto;
   font-family: Arial, sans-serif;
 }
 
-/* Navbar */
 .checkout-navbar {
   background-color: #9f9f9f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 12px 18px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -25,7 +23,6 @@
   color: gray;
 }
 
-/* Grid Layout */
 .checkout-grid {
   display: grid;
   grid-template-columns: 65% 35%;
@@ -33,14 +30,12 @@
   margin: 20px;
 }
 
-/* Left Column */
 .left-column {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Checkout Sections */
 .checkout-section {
   padding: 10px 0px 0 20px;
 }
@@ -62,7 +57,6 @@ h4 {
   color: #333;
 }
 
-/* Payment Methods */
 .payment-methods div {
   display: flex;
   align-items: center;
@@ -73,7 +67,6 @@ h4 {
   margin-right: 10px;
 }
 
-/* Cart Items */
 .cart-items {
   display: flex;
   flex-wrap: wrap;
@@ -94,14 +87,12 @@ h4 {
   border: 1px solid #ddd;
 }
 
-/* Right Column */
 .right-column {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Order Summary */
 .order-summary {
   margin-left: auto;
   margin-right: auto;
@@ -127,7 +118,6 @@ h4 {
   background-color: #f7ca00;
 }
 
-/* Two-column Order Summary */
 .order-summary-details p {
   display: flex;
   justify-content: space-between;
@@ -139,7 +129,6 @@ h4 {
   font-weight: bold;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .checkout-grid {
     grid-template-columns: 1fr;
@@ -214,7 +203,6 @@ h4 {
   color: green;
 }
 
-/* Full Page Order Placed */
 .full-page-order {
   display: flex;
   flex-direction: column;

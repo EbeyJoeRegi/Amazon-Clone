@@ -60,7 +60,7 @@ const MobileNavBar = () => {
 
             <Header />
 
-            {/* Location Bar with Theme Switcher on Right */}
+            {/* Location Bar */}
             <div className="nav-location-bar mobile-nav">
                 <SiGooglemaps size={20} className="location-icon" />
                 <span>Deliver to {name} {address.street}-{address.zip}</span>

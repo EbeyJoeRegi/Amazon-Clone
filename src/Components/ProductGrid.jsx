@@ -14,7 +14,7 @@ const ProductGrid = () => {
                         <a href={grid.link}>
                             <img src={grid.image} alt={grid.title} className="main-grid-image" />
                         </a>
-                        <a href="/" className="see-more-link">See more</a>
+                        <a href={grid.link} className="see-more-link">See more</a>
                     </div>
                 ))}
             </div>

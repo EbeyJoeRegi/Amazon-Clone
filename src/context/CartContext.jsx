@@ -3,19 +3,20 @@ import React, { createContext, useState, useEffect } from "react";
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  // Load cart from localStorage or set empty array
+
+  // Loading cart from localStorage 
   const [cart, setCart] = useState(() => {
     const storedCart = localStorage.getItem("cart");
     return storedCart ? JSON.parse(storedCart) : [];
   });
   const [checkoutItem, setCheckoutItem] = useState(null);
 
-  // Save cart to localStorage whenever it changes
+  // Saving cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // Add item to cart (increase quantity if already exists)
+  // Add item to cart 
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
@@ -35,7 +36,7 @@ export const CartProvider = ({ children }) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
-  // Update quantity (Ensure it never goes below 1)
+  // Update quantity 
   const updateQuantity = (productId, amount) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -44,7 +45,6 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Calculate total items in cart (sum of all quantities)
   const getTotalCartCount = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };

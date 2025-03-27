@@ -66,7 +66,7 @@ const ProductDetails = () => {
 const handleAddToCart = () => {
   addToCart(product, quantity);
   setShowOverlay(true);
-  setQuantity(1); // Reset quantity after adding to cart
+  setQuantity(1);
 
   setTimeout(() => {
     setShowOverlay(false);
@@ -121,7 +121,6 @@ const handleAddToCart = () => {
     </div>
     )}
       <div className="product-container">
-        {/* Left Section (40% Width) */}
         <div className="left-section">
           <div className="thumbnail-list">
             {product.loc.map((img, index) => (
@@ -138,23 +137,15 @@ const handleAddToCart = () => {
             <img src={selectedImage} alt={product.name} />
           </div>
         </div>
-
-        {/* Middle Section (40% Width) */}
         <div className="middle-section">
           <h2 className="product-title">{product.name}</h2>
           <p className="brand">Brand: <strong>{product.brand}</strong></p>
-
-          {/* Rating with Stars */}
           <div className="rating-section">
             {renderStars(product.rating)}
           </div>
 
-          <hr /> {/* Horizontal line separator */}
-
-          {/* Limited Time Deal */}
+          <hr /> 
           <div className="limited-deal">Limited Time Deal</div>
-
-          {/* Pricing Section */}
           <div className="price-section">
             <span className="discount">-{product.discount}% </span>
             <span className="discounted-price">₹{discountedPrice}</span>
@@ -163,17 +154,14 @@ const handleAddToCart = () => {
             <p className="emi-info">EMI starts at ₹506. No Cost EMI available</p>
           </div>
 
-          <hr /> {/* Horizontal line separator */}
+          <hr />
 
           {/* Offers */}
           <div className="offers-section">
-            {/* Offers Heading */}
             <div className="offers-header">
               <img src="/icons/offers.png" alt="Offers" className="offers-icon" />
               <h3 className="offers-heading">Offers</h3>
             </div>
-
-            {/* Offers Carousel */}
             <div className="offers-carousel">
               <FaChevronLeft className="PDarrow PDleft-arrow" onClick={handlePrev} />
               <div className="offers-container" ref={offersContainerRef}>
@@ -188,9 +176,7 @@ const handleAddToCart = () => {
             </div>
           </div>
 
-          <hr /> {/* Horizontal line separator */}
-
-          {/* Icons Row */}
+          <hr />
           <div className="info-icons-container">
             <div className="info-icons">
               {icons.map((item, index) => (
@@ -202,8 +188,6 @@ const handleAddToCart = () => {
             </div>
           </div>
         </div>
-
-        {/* Right Section (Extreme Right - Add to Cart) */}
         <div className="right-section">
           <div className="purchase-box">
             <p className="price">

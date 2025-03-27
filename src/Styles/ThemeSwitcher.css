@@ -1,16 +1,14 @@
-/* Light Theme */
 body.light {
     background-color: #ffffff;
     color: #111;
   }
   
-  /* Dark Theme */
+
   body.dark {
     background-color: #000000;
     color: #f1f1f1;
   }
-  
-  /* 🖥️ Main Navbar Theme Switcher */
+
 .theme-switcher {
   display: flex;
   gap: 8px;
@@ -39,7 +37,7 @@ body.light {
   color: #ffffff;
 }
 
-/* 📱 Mobile Navbar Theme Switcher */
+/* Mobile Theme Switcher */
 .mobile-theme {
   display: flex;
   align-items: center;

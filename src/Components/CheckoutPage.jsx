@@ -5,13 +5,14 @@ import userDetails from "../Data/userDetails.json";
 import "../Styles/CheckoutPage.css";
 
 const CheckoutPage = () => {
-    const { cart, setCart } = useContext(CartContext);
+    const { cart, setCart, checkoutItem, setCheckoutItem } = useContext(CartContext);
     const navigate = useNavigate();
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [countdown, setCountdown] = useState(5);
 
     const { name, address, cards } = userDetails.user;
-    const itemsToCheckout = cart;
+    const itemsToCheckout = checkoutItem ? [checkoutItem] : cart;
+
     const totalAmount = itemsToCheckout.reduce(
         (acc, item) => acc + (item.price * (1 - item.discount / 100)) * (item.quantity || 1),
         0
@@ -23,7 +24,8 @@ const CheckoutPage = () => {
                 setCountdown((prev) => {
                     if (prev === 1) {
                         clearInterval(interval);
-                        setCart([]);
+                        if (!checkoutItem) setCart([]); 
+                        setCheckoutItem(null); 
                         navigate("/");
                     }
                     return prev - 1;
@@ -32,7 +34,7 @@ const CheckoutPage = () => {
 
             return () => clearInterval(interval);
         }
-    }, [orderPlaced, navigate, setCart]);
+    }, [orderPlaced, navigate, setCart, setCheckoutItem, checkoutItem]);
 
     const handlePayment = () => {
         setOrderPlaced(true);
@@ -52,7 +54,7 @@ const CheckoutPage = () => {
             {/* Navbar */}
             <div className="checkout-navbar">
                 <img 
-                    src="/images/Navbar/amazon logo.png" 
+                    src="/images/amazon-in.png" 
                     alt="Amazon Logo" 
                     className="amazon-logo" 
                     onClick={() => navigate("/")} 
@@ -63,7 +65,6 @@ const CheckoutPage = () => {
             </div>
 
             <div className="checkout-grid">
-                {/* Left Column */}
                 <div className="left-column">
                     {/* Delivery Address */}
                     <div className="checkout-section address">
@@ -111,7 +112,6 @@ const CheckoutPage = () => {
                     </div>
                 </div>
 
-                {/* Right Column */}
                 <div className="right-column">
                     <div className="order-summary">
                         <button className="payment-btn" onClick={handlePayment}>Use this payment method</button>

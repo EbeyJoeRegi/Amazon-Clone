@@ -1,11 +1,9 @@
-/* General Grid Styling */
 .product-grid {
     margin-top: 150px;
     margin-left: 35px;
     margin-right: 35px;
 }
 
-/* New Row for 4 Main Grids */
 .main-grid-row {
     display: flex;
     flex-wrap: nowrap;
@@ -14,7 +12,6 @@
     margin-bottom: 20px;
 }
 
-/* Individual Main Grid */
 .main-grid {
     background: white;
     padding: 20px;
@@ -24,14 +21,12 @@
     text-align: center;
 }
 
-/* Main Grid Title */
 .main-grid-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Main Grid Image */
 .main-grid-image {
     width: 100%;
     max-height: auto;
@@ -43,15 +38,13 @@
     transform: scale(1.05);
 }
 
-/* Ensure all grids are in a single row */
 .product-grid .row {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    gap: 25px; /* Increased gap between grids */
+    gap: 25px;
 }
 
-/* See More Link */
 .see-more-link {
     display: block;
     font-size: 14px;
@@ -66,7 +59,6 @@
     text-decoration: underline;
 }
 
-/* 3 Grids (Between 1024px & 850px) */
 @media (max-width: 1024px) {
     .main-grid-row .main-grid:nth-child(4) {
         display: none;
@@ -78,8 +70,6 @@
     }
 }
 
-
-/* 2 Grids (Between 768px & 600px) */
 @media (max-width: 877px) {
     .main-grid-row .main-grid:nth-child(3),
     .main-grid-row .main-grid:nth-child(4) {
@@ -97,15 +87,13 @@
     }
 }
 
-/* 1 Grid from Each Type (Below 468px) */
 @media (max-width: 468px) {
     .main-grid-row {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: column;
         align-items: center;
         gap: 15px;
     }
 
-    /* Show only the first Main Grid, hide others */
     .main-grid-row .main-grid:nth-child(n+2) {
         display: none;
     }

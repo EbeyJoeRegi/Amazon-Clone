@@ -8,7 +8,6 @@ import "../Styles/ProductCard.css";
 const ProductCard = () => {
   const navigate = useNavigate();
 
-  // Create an array of refs for each category
   const carouselRefs = useRef([]);
 
   const scroll = (index, direction) => {
@@ -23,18 +22,14 @@ const ProductCard = () => {
     <div className="all-products">
       {productData.categories.map((category, index) => (
         <div key={category.id} className="product-section">
-          {/* Category Heading */}
           <h2 className="product-heading">{category.heading}</h2>
 
           <div className="carousel-container">
-            {/* Left Arrow */}
             <FaChevronLeft className="PCarrow PCleft" onClick={() => scroll(index, "left")} />
-
-            {/* Product List (Scrollable) */}
             <div className="product-wrapper">
               <div
                 className="product-list"
-                ref={(el) => (carouselRefs.current[index] = el)} // ✅ Assign ref dynamically
+                ref={(el) => (carouselRefs.current[index] = el)}
               >
                 {category.products.map((product) => (
                   <div
@@ -47,8 +42,6 @@ const ProductCard = () => {
                 ))}
               </div>
             </div>
-
-            {/* Right Arrow */}
             <FaChevronRight className="PCarrow PCright" onClick={() => scroll(index, "right")} />
           </div>
         </div>
