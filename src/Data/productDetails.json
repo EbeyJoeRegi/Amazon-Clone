@@ -20,26 +20,26 @@
         },
         {
           "id": 102,
-          "name": "Apple iPhone 14",
+          "name": "Apple iPhone 16 Pro Max",
           "price": 1099.99,
           "discount": 5,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M4.jpg",
+            "/images/ProductDetails/Mobile/M5.jpg",
+            "/images/ProductDetails/Mobile/M6.jpg"
           ],
           "brand": "Apple",
           "rating": 4.8
         },
         {
           "id": 103,
-          "name": "Google Pixel 7",
+          "name": "Google Pixel 7 Pro",
           "price": 899.99,
           "discount": 12,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M7.jpg",
+            "/images/ProductDetails/Mobile/M8.jpg",
+            "/images/ProductDetails/Mobile/M9.jpg"
           ],
           "brand": "Google",
           "rating": 4.2
@@ -63,9 +63,9 @@
           "price": 749.99,
           "discount": 15,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M4.jpg",
+            "/images/ProductDetails/Mobile/M5.jpg",
+            "/images/ProductDetails/Mobile/M6.jpg"
           ],
           "brand": "Xiaomi",
           "rating": 4.4
@@ -76,9 +76,9 @@
           "price": 1199.99,
           "discount": 7,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M7.jpg",
+            "/images/ProductDetails/Mobile/M8.jpg",
+            "/images/ProductDetails/Mobile/M9.jpg"
           ],
           "brand": "Sony",
           "rating": 4.1
@@ -102,9 +102,9 @@
           "price": 999.99,
           "discount": 10,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M4.jpg",
+            "/images/ProductDetails/Mobile/M5.jpg",
+            "/images/ProductDetails/Mobile/M6.jpg"
           ],
           "brand": "Oppo",
           "rating": 4.5
@@ -115,9 +115,9 @@
           "price": 849.99,
           "discount": 6,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M7.jpg",
+            "/images/ProductDetails/Mobile/M8.jpg",
+            "/images/ProductDetails/Mobile/M9.jpg"
           ],
           "brand": "Asus",
           "rating": 4.2
@@ -141,9 +141,9 @@
           "price": 1099.99,
           "discount": 9,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M4.jpg",
+            "/images/ProductDetails/Mobile/M5.jpg",
+            "/images/ProductDetails/Mobile/M6.jpg"
           ],
           "brand": "Vivo",
           "rating": 4.6
@@ -154,9 +154,9 @@
           "price": 799.99,
           "discount": 10,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M7.jpg",
+            "/images/ProductDetails/Mobile/M8.jpg",
+            "/images/ProductDetails/Mobile/M9.jpg"
           ],
           "brand": "Nokia",
           "rating": 4.0
@@ -180,9 +180,9 @@
           "price": 649.99,
           "discount": 18,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Mobile/M4.jpg",
+            "/images/ProductDetails/Mobile/M5.jpg",
+            "/images/ProductDetails/Mobile/M6.jpg"
           ],
           "brand": "LG",
           "rating": 3.9
@@ -200,9 +200,9 @@
           "price": 1499.99,
           "discount": 15,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/TV/T1.jpg",
+            "/images/ProductDetails/TV/T2.jpg",
+            "/images/ProductDetails/TV/T3.jpg"
           ],
           "brand": "LG",
           "rating": 4.7
@@ -213,9 +213,9 @@
           "price": 1199.99,
           "discount": 10,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/TV/T1.jpg",
+            "/images/ProductDetails/TV/T2.jpg",
+            "/images/ProductDetails/TV/T3.jpg"
           ],
           "brand": "Samsung",
           "rating": 4.3
@@ -226,9 +226,9 @@
           "price": 1599.99,
           "discount": 20,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/TV/T1.jpg",
+            "/images/ProductDetails/TV/T2.jpg",
+            "/images/ProductDetails/TV/T3.jpg"
           ],
           "brand": "Sony",
           "rating": 4.6
@@ -246,9 +246,9 @@
           "price": 599.99,
           "discount": 10,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Home/H1.jpg",
+            "/images/ProductDetails/Home/H2.jpg",
+            "/images/ProductDetails/Home/H3.jpg"
           ],
           "brand": "Dyson",
           "rating": 4.8
@@ -259,9 +259,9 @@
           "price": 89.99,
           "discount": 15,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Home/H3.jpg",
+            "/images/ProductDetails/Home/H2.jpg",
+            "/images/ProductDetails/Home/H1.jpg"
           ],
           "brand": "Instant Pot",
           "rating": 4.5
@@ -272,9 +272,9 @@
           "price": 249.99,
           "discount": 8,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Home/H2.jpg",
+            "/images/ProductDetails/Home/H1.jpg",
+            "/images/ProductDetails/Home/H3.jpg"
           ],
           "brand": "iRobot",
           "rating": 4.2
@@ -292,9 +292,9 @@
           "price": 7.99,
           "discount": 5,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Makeup/M1.jpg",
+            "/images/ProductDetails/Makeup/M2.jpg",
+            "/images/ProductDetails/Makeup/M3.jpg"
           ],
           "brand": "Maybelline",
           "rating": 4.0
@@ -305,9 +305,9 @@
           "price": 19.99,
           "discount": 10,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Makeup/M3.jpg",
+            "/images/ProductDetails/Makeup/M2.jpg",
+            "/images/ProductDetails/Makeup/M1.jpg"
           ],
           "brand": "MAC Cosmetics",
           "rating": 4.7
@@ -318,9 +318,9 @@
           "price": 8.99,
           "discount": 12,
           "loc": [
-            "/images/ProductDetails/Mobile/M1.jpg",
-            "/images/ProductDetails/Mobile/M2.jpg",
-            "/images/ProductDetails/Mobile/M3.jpg"
+            "/images/ProductDetails/Makeup/M2.jpg",
+            "/images/ProductDetails/Makeup/M1.jpg",
+            "/images/ProductDetails/Makeup/M3.jpg"
           ],
           "brand": "L'Oréal",
           "rating": 4.3
