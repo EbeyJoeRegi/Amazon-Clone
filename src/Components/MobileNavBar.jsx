@@ -4,13 +4,13 @@ import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import userDetails from "../Data/userDetails.json";
 import { CartContext } from "../context/CartContext";
-import ThemeSwitcher from "./ThemeSwitcher"; // Import Theme Switcher
+import ThemeSwitcher from "./ThemeSwitcher"; 
 import "../Styles/NavBar.css";
 import Header from "./Header";
 
 const MobileNavBar = () => {
     const { name, address } = userDetails.user;
-    const { getTotalCartCount } = useContext(CartContext); // Get theme and toggle function
+    const { getTotalCartCount } = useContext(CartContext); 
     const [searchQuery, setSearchQuery] = useState("");
     const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const MobileNavBar = () => {
     };
 
     return (
-        <>
+        <div>
             {/* Top Navbar */}
             <div className={`navbar-top mobile-nav`}>
                 <div className="nav-left">
@@ -45,16 +45,6 @@ const MobileNavBar = () => {
             {/* Search Bar */}
             <div className="nav-search-container">
                 <form className="nav-search" onSubmit={handleSearch}>
-                    <select 
-                        className="nav-search-category" 
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    >
-                        <option value="All">All</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Clothing">Clothing</option>
-                        <option value="Books">Books</option>
-                    </select>
                     <input
                         type="search"
                         placeholder="Search Amazon.in"
@@ -76,7 +66,7 @@ const MobileNavBar = () => {
                 <span>Deliver to {name} {address.street}-{address.zip}</span>
                 <ThemeSwitcher type="mobile" />
             </div>
-        </>
+        </div>
     );
 };
 

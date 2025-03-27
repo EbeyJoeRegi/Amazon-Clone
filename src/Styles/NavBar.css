@@ -63,15 +63,6 @@
   transition: max-width 0.3s ease-in-out;
 }
 
-.nav-search-category {
-  background: #e6e6e6;
-  border: none;
-  padding: 13px;
-  border-right: 1px solid #ddd;
-  font-size: 14px;
-  text-align: center;
-}
-
 .nav-search-input {
   flex: 1;
   padding: 10px;
@@ -320,17 +311,6 @@
     border-radius: 8px; /* Rounded corners */
     overflow: hidden;
     align-items: center; /* Ensures proper alignment */
-}
-
-.nav-search-category {
-    height: 100%; /* Match the height of the search box */
-    padding: 0 10px;
-    border: none;
-    background-color: #f3f3f3;
-    font-size: 14px;
-    outline: none;
-    display: flex;
-    align-items: center;
 }
 
 .nav-search-input {

@@ -1,0 +1,92 @@
+/* Wrapper for full-page center alignment */
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Amazon logo centered at the top */
+.logo {
+    width: 50;
+    margin-bottom: 10px;
+}
+
+/* Signup form container */
+.signup-container {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.form-group input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Mobile input container */
+.mobile-input {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-input select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Button styling */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #ffd814;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #f7ca00;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+/* Existing account text */
+.existing {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.existing a {
+    color: #007185;
+    text-decoration: none;
+}

@@ -5,17 +5,13 @@ import userDetails from "../Data/userDetails.json";
 import "../Styles/CheckoutPage.css";
 
 const CheckoutPage = () => {
-    const { cart, setCart, checkoutItem, setCheckoutItem } = useContext(CartContext);
+    const { cart, setCart } = useContext(CartContext);
     const navigate = useNavigate();
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [countdown, setCountdown] = useState(5);
 
     const { name, address, cards } = userDetails.user;
-
-    // Determine checkout items: Buy Now item OR full cart
-    const itemsToCheckout = checkoutItem ? [checkoutItem] : cart;
-
-    // ✅ Ensure total price is calculated correctly
+    const itemsToCheckout = cart;
     const totalAmount = itemsToCheckout.reduce(
         (acc, item) => acc + (item.price * (1 - item.discount / 100)) * (item.quantity || 1),
         0
@@ -27,8 +23,7 @@ const CheckoutPage = () => {
                 setCountdown((prev) => {
                     if (prev === 1) {
                         clearInterval(interval);
-                        if (!checkoutItem) setCart([]); // Empty cart if it's a cart checkout
-                        setCheckoutItem(null); // Clear Buy Now item after purchase
+                        setCart([]);
                         navigate("/");
                     }
                     return prev - 1;
@@ -37,7 +32,7 @@ const CheckoutPage = () => {
 
             return () => clearInterval(interval);
         }
-    }, [orderPlaced, navigate, setCart, setCheckoutItem, checkoutItem]);
+    }, [orderPlaced, navigate, setCart]);
 
     const handlePayment = () => {
         setOrderPlaced(true);
@@ -67,7 +62,6 @@ const CheckoutPage = () => {
                 <h2 className="secure-icon">🔒</h2>
             </div>
 
-            {/* Main Checkout Grid */}
             <div className="checkout-grid">
                 {/* Left Column */}
                 <div className="left-column">
