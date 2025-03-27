@@ -1,19 +1,30 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
 import { SiGooglemaps } from "react-icons/si";
 import userDetails from "../Data/userDetails.json";
 import { CartContext } from "../context/CartContext";
+import ThemeSwitcher from "./ThemeSwitcher"; // Import Theme Switcher
 import "../Styles/NavBar.css";
 import Header from "./Header";
 
 const MobileNavBar = () => {
     const { name, address } = userDetails.user;
-    const { getTotalCartCount } = useContext(CartContext);
+    const { getTotalCartCount } = useContext(CartContext); // Get theme and toggle function
+    const [searchQuery, setSearchQuery] = useState("");
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchQuery.trim().length > 0) {  
+            navigate(`/search-results/${encodeURIComponent(searchQuery.trim())}`);
+        }
+    };
 
     return (
         <>
-            <div className="navbar-top">
+            {/* Top Navbar */}
+            <div className={`navbar-top mobile-nav`}>
                 <div className="nav-left">
                     <a href="/" className="nav-logo">
                         <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" />
@@ -28,27 +39,42 @@ const MobileNavBar = () => {
                             <span className="cart-text">cart</span>
                         </div>
                     </Link>
-
                 </div>
             </div>
+
+            {/* Search Bar */}
             <div className="nav-search-container">
-                <div className="nav-search">
-                    <select className="nav-search-category">
-                        <option>All</option>
-                        <option>Electronics</option>
-                        <option>Clothing</option>
-                        <option>Books</option>
+                <form className="nav-search" onSubmit={handleSearch}>
+                    <select 
+                        className="nav-search-category" 
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    >
+                        <option value="All">All</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Books">Books</option>
                     </select>
-                    <input type="search" placeholder="Search Amazon.in" className="nav-search-input" />
-                    <button className="nav-search-btn">
+                    <input
+                        type="search"
+                        placeholder="Search Amazon.in"
+                        className="nav-search-input"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                    <button className="nav-search-btn" type="submit">
                         <FaSearch />
                     </button>
-                </div>
+                </form>
             </div>
+
             <Header />
-            <div className="nav-location-bar">
+
+            {/* Location Bar with Theme Switcher on Right */}
+            <div className="nav-location-bar mobile-nav">
                 <SiGooglemaps size={20} className="location-icon" />
                 <span>Deliver to {name} {address.street}-{address.zip}</span>
+                <ThemeSwitcher type="mobile" />
             </div>
         </>
     );

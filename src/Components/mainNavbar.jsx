@@ -6,6 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import userDetails from "../Data/userDetails.json";
 import "../Styles/NavBar.css";
 import { CartContext } from "../context/CartContext";
+import ThemeSwitcher from "./ThemeSwitcher"; // Import Theme Switcher
 
 const MainNavbar = () => {
     const { name, address } = userDetails.user;
@@ -34,6 +35,12 @@ const MainNavbar = () => {
                     </div>
                 </div>
                 <form className="nav-search" onSubmit={handleSearch}>
+                    <select className="nav-search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Clothing</option>
+                        <option>Books</option>
+                    </select>
                     <input 
                         type="search" 
                         placeholder="Search Amazon.in" 
@@ -65,6 +72,9 @@ const MainNavbar = () => {
                         <span className="cart-text">cart</span>
                     </div>
                 </Link>
+
+                {/* Theme Switcher Button */}
+                <ThemeSwitcher type="main" />
             </div>
         </nav>
     );

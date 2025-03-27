@@ -8,6 +8,7 @@ import CheckoutPage from "./Components/CheckoutPage";
 import ProductCard from "./Components/ProductCard";
 import ProductDetails from "./Components/ProductDetail";
 import SearchResults from "./Components/SearchResults";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import './Styles/style.css';
 
@@ -46,11 +47,13 @@ function Layout() {
 
 function App() {
   return (
+    <ThemeProvider>
     <CartProvider>
       <BrowserRouter>
         <Layout />
       </BrowserRouter>
     </CartProvider>
+    </ThemeProvider>
   );
 }
 

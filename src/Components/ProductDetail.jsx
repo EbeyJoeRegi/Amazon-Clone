@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import productData from "../Data/productDetails.json";
@@ -50,7 +50,9 @@ const offers = [
 const ProductDetails = () => {
   const { address } = userDetails.user;
   const { categoryId, productId } = useParams();
-  const { addToCart } = useContext(CartContext);
+  const navigate = useNavigate();
+  const { addToCart,setCheckoutItem  } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
 
   const category = productData.categories.find((cat) => cat.id.toString() === categoryId);
   const product = category?.products.find((prod) => prod.id.toString() === productId);
@@ -59,9 +61,43 @@ const ProductDetails = () => {
 
   const offersContainerRef = React.useRef(null);
 
+  const [showOverlay, setShowOverlay] = useState(false);
+
+const handleAddToCart = () => {
+  addToCart(product, quantity);
+  setShowOverlay(true);
+  setQuantity(1); // Reset quantity after adding to cart
+
+  setTimeout(() => {
+    setShowOverlay(false);
+  }, 2000);
+};
+
   if (!product) {
-    return <h2>Product not found</h2>;
+    return (
+      <div className="not-found-container">
+        <img src="/images/no page found.jpg" alt="Product Not Found" className="not-found-image" />
+        <h2>Oops! Product Not Found</h2>
+        <p>Sorry, we couldn't find the product you're looking for. It may have been removed or is unavailable.</p>
+        <button className="not-found-button" onClick={() => navigate("/")}>
+          Go to Homepage
+        </button>
+      </div>
+    );
   }
+
+  const handleBuyNow = () => {
+    setCheckoutItem({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      discount:product.discount,
+      quantity: quantity,
+      image: selectedImage,
+    });
+  
+    navigate("/checkout");
+  };
 
   const handleNext = () => {
     if (offersContainerRef.current) {
@@ -79,6 +115,11 @@ const ProductDetails = () => {
 
   return (
     <div className="product-page">
+      {showOverlay && (
+      <div className="cart-overlay">
+      <div className="cart-spinner"></div>
+    </div>
+    )}
       <div className="product-container">
         {/* Left Section (40% Width) */}
         <div className="left-section">
@@ -200,7 +241,12 @@ const ProductDetails = () => {
             <div className="quantity-container">
               <label htmlFor="quantity" className="quantity-label">Quantity:</label>
               <div className="custom-select">
-                <select id="quantity" className="quantity-select">
+                <select
+                  id="quantity"
+                  className="quantity-select"
+                  value={quantity}
+                  onChange={(e) => setQuantity(parseInt(e.target.value))}
+                >
                   {[...Array(10)].map((_, i) => (
                     <option key={i + 1} value={i + 1}>{i + 1}</option>
                   ))}
@@ -208,8 +254,9 @@ const ProductDetails = () => {
               </div>
             </div>
 
-            <button className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>
-            <button className="buy-now">Buy Now</button>
+
+            <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
+            <button className="buy-now" onClick={handleBuyNow}>Buy Now</button>
 
             <label className="gift-option">
               <input type="checkbox" /><p className="gift">Add gift options</p>

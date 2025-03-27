@@ -186,14 +186,14 @@
 }
 
 @media (max-width: 1024px) {
-  .nav-search {
-      max-width: 600px;
-  }
+  .nav-search input{
+    width: 100%;
+}
 }
 
 @media (max-width: 900px) {
-  .nav-search {
-      max-width: 500px;
+  .nav-search input{
+      width: 50%;
   }
   .nav-account, .nav-orders {
       font-size: 12px; /* Reduces size slightly to fit */

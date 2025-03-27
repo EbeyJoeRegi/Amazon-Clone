@@ -25,15 +25,23 @@
     width: 100%;
     height: 20%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+    transition: background 0.3s ease-in-out;
+}
+
+/* When Dark Mode is Active */
+body.dark .fade-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
 }
 
 .arrow {
     position: absolute;
-    top: 7.5%; /* 1/4th from the top */
+    top: 7.5%;
+    /* 1/4th from the top */
     background: none;
     border: none;
     color: white;
-    font-size: 50px; /* Arrow size */
+    font-size: 50px;
+    /* Arrow size */
     cursor: pointer;
     z-index: 10;
 }
@@ -53,35 +61,42 @@
 /* Overlay ProductGrid at 60% of the banner height */
 .product-grid-overlay {
     position: absolute;
-    top: 20%; /* Start from 60% of banner height */
+    top: 20%;
+    /* Start from 60% of banner height */
     left: 0;
     width: 100%;
-    z-index: 10; /* Ensure it's above the banner */
+    z-index: 10;
+    /* Ensure it's above the banner */
 }
 
 /* Medium Screens (Max Width 1024px) */
 @media (max-width: 1024px) {
     .product-grid-overlay {
-        top: 15%; /* Move higher on smaller screens */
+        top: 15%;
+        /* Move higher on smaller screens */
     }
 
     .arrow {
-        top: 5%; /* Adjust arrow higher */
+        top: 5%;
+        /* Adjust arrow higher */
     }
 }
 
 /* Tablet Screens (Max Width 768px) */
 @media (max-width: 877px) {
     .product-grid-overlay {
-        top: 15%; /* Further move up on smaller screens */
+        top: 15%;
+        /* Further move up on smaller screens */
     }
 
     .banner-image {
-        width: 125%; /* Increase width to zoom in and cut sides */
+        width: 125%;
+        /* Increase width to zoom in and cut sides */
         margin-left: -75px;
         height: auto;
         display: block;
-        object-fit: cover; /* Ensures the image fills the container without stretching */
+        object-fit: cover;
+        /* Ensures the image fills the container without stretching */
     }
 
     .banner-container {
@@ -95,14 +110,17 @@
 
 @media (max-width: 468px) {
     .product-grid-overlay {
-        top: 10%; /* Further move up on smaller screens */
+        top: 10%;
+        /* Further move up on smaller screens */
     }
 
     .banner-image {
-        width: 175%; /* Increase width to zoom in and cut sides */
+        width: 175%;
+        /* Increase width to zoom in and cut sides */
         margin-left: -150px;
         height: auto;
         display: block;
-        object-fit: cover; /* Ensures the image fills the container without stretching */
+        object-fit: cover;
+        /* Ensures the image fills the container without stretching */
     }
 }

@@ -1,34 +1,53 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import userDetails from "../Data/userDetails.json";
 import "../Styles/CheckoutPage.css";
 
 const CheckoutPage = () => {
-    const { cart, setCart } = useContext(CartContext);
+    const { cart, setCart, checkoutItem, setCheckoutItem } = useContext(CartContext);
     const navigate = useNavigate();
     const [orderPlaced, setOrderPlaced] = useState(false);
+    const [countdown, setCountdown] = useState(5);
 
     const { name, address, cards } = userDetails.user;
 
-    const totalAmount = cart.reduce(
-        (acc, item) => acc + (item.price * (1 - item.discount / 100)) * item.quantity,
+    // Determine checkout items: Buy Now item OR full cart
+    const itemsToCheckout = checkoutItem ? [checkoutItem] : cart;
+
+    // ✅ Ensure total price is calculated correctly
+    const totalAmount = itemsToCheckout.reduce(
+        (acc, item) => acc + (item.price * (1 - item.discount / 100)) * (item.quantity || 1),
         0
     ).toFixed(2);
 
+    useEffect(() => {
+        if (orderPlaced) {
+            const interval = setInterval(() => {
+                setCountdown((prev) => {
+                    if (prev === 1) {
+                        clearInterval(interval);
+                        if (!checkoutItem) setCart([]); // Empty cart if it's a cart checkout
+                        setCheckoutItem(null); // Clear Buy Now item after purchase
+                        navigate("/");
+                    }
+                    return prev - 1;
+                });
+            }, 1000);
+
+            return () => clearInterval(interval);
+        }
+    }, [orderPlaced, navigate, setCart, setCheckoutItem, checkoutItem]);
+
     const handlePayment = () => {
         setOrderPlaced(true);
-        setCart([]); // Empty the cart
-        setTimeout(() => {
-            navigate("/");
-        }, 5000);
     };
 
     if (orderPlaced) {
         return (
             <div className="full-page-order">
                 <h2>🎉 Order Placed Successfully!</h2>
-                <p>Redirecting to home page...</p>
+                <p>Redirecting to home page in <b>{countdown}</b> seconds...</p>
             </div>
         );
     }
@@ -37,8 +56,13 @@ const CheckoutPage = () => {
         <div className="checkout-container">
             {/* Navbar */}
             <div className="checkout-navbar">
-            <img src="/images/Navbar/amazon logo.png" alt="Amazon Logo" className="amazon-logo" onClick={() => navigate("/")} 
-                style={{ cursor: "pointer" }} />
+                <img 
+                    src="/images/Navbar/amazon logo.png" 
+                    alt="Amazon Logo" 
+                    className="amazon-logo" 
+                    onClick={() => navigate("/")} 
+                    style={{ cursor: "pointer" }} 
+                />
                 <h2>Checkout</h2>
                 <h2 className="secure-icon">🔒</h2>
             </div>
@@ -72,15 +96,21 @@ const CheckoutPage = () => {
                     </div>
                     <hr />
 
-                    {/* Cart Items & Delivery */}
+                    {/* Items & Delivery */}
                     <div className="checkout-section">
                         <h4>3. Items & Delivery</h4>
-                        <p className="delivery-date">Estimated delivery date: {new Date().toDateString()}</p>
+                        <p className="delivery-date">
+                            Estimated delivery date: {new Date().toDateString()}
+                        </p>
                         <div className="cart-items">
-                            {cart.map((item) => (
+                            {itemsToCheckout.map((item) => (
                                 <div key={item.id} className="checkout-item">
-                                    <img src={item.loc[0]} alt={item.name} className="checkout-item-img" />
-                                    <p>{item.name}</p>
+                                    <img src={item.image || item.loc[0]} alt={item.name} className="checkout-item-img" />
+                                    <div>
+                                        <p>{item.name}</p>
+                                        <p>₹{(item.price * (1 - item.discount / 100)).toFixed(2)}</p>
+                                        <p>Quantity : {(item.quantity)}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>

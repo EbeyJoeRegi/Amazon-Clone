@@ -7,7 +7,7 @@
 
 /* Navbar */
 .checkout-navbar {
-  background-color: #f3f3f3;
+  background-color: #9f9f9f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,8 +88,8 @@ h4 {
 }
 
 .checkout-item-img {
-  width: 60px;
-  height: 60px;
+  width: 15%;
+  height: auto;
   object-fit: cover;
   border: 1px solid #ddd;
 }
@@ -109,7 +109,6 @@ h4 {
   max-width: 350px;
   padding: 20px;
   border: 1px solid #ddd;
-  background-color: #f8f8f8;
   border-radius: 15px;
 }
 
@@ -170,11 +169,6 @@ h4 {
     width: 100%;
   }
 
-  .checkout-item {
-    align-items: center;
-    text-align: center;
-  }
-
   .checkout-item-img {
     width: 25%;
     height: auto;
@@ -200,8 +194,8 @@ h4 {
   }
 
   .checkout-item-img {
-    width: 80px;
-    height: 80px;
+    width: 30%;
+    height: auto;
   }
 
   .payment-btn {
@@ -228,7 +222,6 @@ h4 {
   justify-content: center;
   height: 100vh;
   text-align: center;
-  background-color: #fff;
   font-size: 24px;
   font-weight: bold;
 }

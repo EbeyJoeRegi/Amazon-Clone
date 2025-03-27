@@ -202,6 +202,18 @@
   color: #ffa41c; /* Yellow for filled stars */
 }
 
+.no-results {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+  color: #555;
+}
+
+.no-results p {
+  font-size: 16px;
+  color: #777;
+}
+
 /* ✅ RESPONSIVE DESIGN */
 
 /* Mobile Phones (max-width: 768px) */
