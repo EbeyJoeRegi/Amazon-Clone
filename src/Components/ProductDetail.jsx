@@ -61,16 +61,9 @@ const ProductDetails = () => {
 
   const offersContainerRef = React.useRef(null);
 
-  const [showOverlay, setShowOverlay] = useState(false);
-
 const handleAddToCart = () => {
   addToCart(product, quantity);
-  setShowOverlay(true);
   setQuantity(1);
-
-  setTimeout(() => {
-    setShowOverlay(false);
-  }, 2000);
 };
 
   if (!product) {
@@ -115,11 +108,6 @@ const handleAddToCart = () => {
 
   return (
     <div className="product-page">
-      {showOverlay && (
-      <div className="cart-overlay">
-      <div className="cart-spinner"></div>
-    </div>
-    )}
       <div className="product-container">
         <div className="left-section">
           <div className="thumbnail-list">
