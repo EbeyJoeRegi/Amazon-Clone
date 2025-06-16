@@ -19,7 +19,7 @@ const SignIn = () => {
             inputUsername === userDetails.user.username &&
             inputPassword === userDetails.user.pw
         ) {
-            navigate("/"); 
+            navigate("/"); // Redirect to homepage on success
         } else {
             setError("Incorrect username or password");
         }

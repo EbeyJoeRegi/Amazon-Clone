@@ -1,3 +1,4 @@
+/* Cart Page Layout */
 .cart-page {
   display: flex;
   justify-content: space-between;
@@ -5,12 +6,14 @@
   flex-wrap: wrap;
 }
 
+/* Main Cart Container (Left Side) */
 .cart-container {
   width: 70%;
   padding: 20px;
   border-radius: 5px;
 }
 
+/* Cart Header */
 .cart-header {
   display: flex;
   justify-content: space-between;
@@ -29,6 +32,7 @@
   text-align: right;
 }
 
+/* Cart Items */
 .cart-item {
   display: flex;
   align-items: center;
@@ -45,6 +49,7 @@
   margin-right: 15px;
 }
 
+/* Product Details */
 .cart-item-details {
   flex-grow: 1;
   display: flex;
@@ -66,6 +71,7 @@
   font-size: 14px;
 }
 
+/* Quantity and Actions */
 .cart-item-quantity-actions {
   display: flex;
   align-items: center;
@@ -98,6 +104,7 @@
   margin: 0 10px;
 }
 
+/* Action Links */
 .cart-item-actions {
   display: flex;
   align-items: center;
@@ -123,6 +130,7 @@
   content: "";
 }
 
+/* Product Price */
 .cart-item-discounted-price {
   color: #b12704;
   font-size: 16px;
@@ -130,6 +138,7 @@
   text-align: right;
 }
 
+/* Right Side - Cart Summary */
 .cart-summary {
   width: 25%;
   padding: 20px;
@@ -159,6 +168,7 @@
   background: #f7ca00;
 }
 
+/* Subtotal Section */
 .subtotal-section {
   text-align: right;
   font-size: 18px;
@@ -166,6 +176,7 @@
   margin-top: 20px;
 }
 
+/* Empty Cart Styling */
 .empty-cart-container {
   text-align: center;
   margin-top: 20px;
@@ -178,6 +189,7 @@
   margin-top: 10px;
 }
 
+/* Responsive Design */
 @media screen and (max-width: 1024px) {
   .cart-page {
     flex-direction: column;

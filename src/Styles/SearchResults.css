@@ -1,3 +1,4 @@
+/* Container */
 .search-results-container {
     display: flex;
     width: auto;
@@ -6,6 +7,7 @@
     background-color: #f8f8f8;
   }
   
+  /* Left Column: Filters */
   .search-results-filters {
     width: 20%;
     padding: 15px;
@@ -22,15 +24,15 @@
   
   .brand-filter-container {
     display: flex;
-    flex-direction: column; 
-    gap: 5px;
+    flex-direction: column; /* Stack brand-filter rows */
+    gap: 5px; /* Space between each brand */
   }
   
   .brand-filter-row {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    width: 80%;
+    align-items: center; /* Aligns text and checkbox in a row */
+    justify-content: space-between; /* Spaces brand name and checkbox */
+    width: 80%; /* Ensures full width for alignment */
   }
   
   .brand-label {
@@ -39,7 +41,7 @@
   }
   
   .brand-checkbox {
-    transform: scale(1.2); 
+    transform: scale(1.2); /* Slightly larger checkbox */
     cursor: pointer;
   }
 
@@ -51,14 +53,15 @@
     border-radius: 5px;
   }
   
- .search-results-list {
+  /* Right Column: Product List */
+  .search-results-list {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
   
-
+  /* Product Card */
   .search-results-card {
     display: flex;
     background-color: white;
@@ -72,6 +75,7 @@
     transform: scale(1.02);
   }
   
+  /* Image Section */
   .search-results-image {
     flex: 1;
     display: flex;
@@ -85,6 +89,7 @@
     object-fit: contain;
   }
   
+  /* Product Info */
   .search-results-info {
     flex: 3;
     padding-left: 15px;
@@ -123,6 +128,7 @@
     margin-bottom: 5px;
   }
   
+  /* Pricing */
   .search-results-disc {
     font-size: 25px;
     font-weight: bold;
@@ -142,6 +148,7 @@
     font-weight: 600;
   }
   
+  /* Prime and Delivery */
   .search-results-prime {
     color: #0073b1;
     font-size: 14px;
@@ -156,6 +163,7 @@
     color: #000;
   }
   
+  /* Add to Cart Button */
   .search-results-add-to-cart {
     background-color: #ffd814;
     border: none;
@@ -172,6 +180,7 @@
     background-color: #f7ca00;
   }
   
+  /* Star Rating */
 .search-results-rating {
   display: flex;
   align-items: center;
@@ -190,7 +199,7 @@
 }
 
 .search-results-star.filled {
-  color: #ffa41c; 
+  color: #ffa41c; /* Yellow for filled stars */
 }
 
 .no-results {
@@ -205,7 +214,9 @@
   color: #777;
 }
 
+/* ✅ RESPONSIVE DESIGN */
 
+/* Mobile Phones (max-width: 768px) */
 @media (max-width: 768px) {
     .search-results-container {
         flex-direction: column;
@@ -222,13 +233,13 @@
     }
 
     .search-results-card {
-        flex-direction: column; 
+        flex-direction: column; /* Stack image & details */
         text-align: center;
         padding: 10px;
     }
 
     .search-results-image img {
-        width: 100px; 
+        width: 100px; /* Adjust image size */
     }
 
     .search-results-info {

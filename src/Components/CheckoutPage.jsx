@@ -11,8 +11,11 @@ const CheckoutPage = () => {
     const [countdown, setCountdown] = useState(5);
 
     const { name, address, cards } = userDetails.user;
+
+    // Determine checkout items: Buy Now item OR full cart
     const itemsToCheckout = checkoutItem ? [checkoutItem] : cart;
 
+    // ✅ Ensure total price is calculated correctly
     const totalAmount = itemsToCheckout.reduce(
         (acc, item) => acc + (item.price * (1 - item.discount / 100)) * (item.quantity || 1),
         0
@@ -24,8 +27,8 @@ const CheckoutPage = () => {
                 setCountdown((prev) => {
                     if (prev === 1) {
                         clearInterval(interval);
-                        if (!checkoutItem) setCart([]); 
-                        setCheckoutItem(null); 
+                        if (!checkoutItem) setCart([]); // Empty cart if it's a cart checkout
+                        setCheckoutItem(null); // Clear Buy Now item after purchase
                         navigate("/");
                     }
                     return prev - 1;
@@ -54,7 +57,7 @@ const CheckoutPage = () => {
             {/* Navbar */}
             <div className="checkout-navbar">
                 <img 
-                    src="/images/amazon-in.png" 
+                    src="/images/Navbar/amazon logo.png" 
                     alt="Amazon Logo" 
                     className="amazon-logo" 
                     onClick={() => navigate("/")} 
@@ -64,7 +67,9 @@ const CheckoutPage = () => {
                 <h2 className="secure-icon">🔒</h2>
             </div>
 
+            {/* Main Checkout Grid */}
             <div className="checkout-grid">
+                {/* Left Column */}
                 <div className="left-column">
                     {/* Delivery Address */}
                     <div className="checkout-section address">
@@ -112,6 +117,7 @@ const CheckoutPage = () => {
                     </div>
                 </div>
 
+                {/* Right Column */}
                 <div className="right-column">
                     <div className="order-summary">
                         <button className="payment-btn" onClick={handlePayment}>Use this payment method</button>

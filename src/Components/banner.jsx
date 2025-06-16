@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import banners from "../Data/banner.json";
 import ProductGrid from "./ProductGrid"
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack,IoIosArrowForward } from "react-icons/io";
 import "../Styles/Banner.css";
 
 const Banner = () => {
@@ -30,7 +30,8 @@ const Banner = () => {
                 <div className="fade-overlay"></div>
             </div>
             <button className="arrow right" onClick={nextSlide}><IoIosArrowForward /></button>
-            <div className="product-grid-overlay">
+             {/* Product Grid Positioned Below the Banner */}
+             <div className="product-grid-overlay">
                 <ProductGrid />
             </div>
         </div>

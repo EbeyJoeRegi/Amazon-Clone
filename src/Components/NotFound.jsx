@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/NotFound.css";
 
+// Random 404 Image Selection
 const errorImages = [
   "/images/404/1.png",
   "/images/404/2.png",

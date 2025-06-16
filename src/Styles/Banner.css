@@ -1,10 +1,11 @@
+/* Banner.css */
 .banner-container {
     position: relative;
     width: 100%;
     max-width: 1540px;
     margin: auto;
     overflow: hidden;
-    min-height: 700px;
+    min-height: 1100px;
 }
 
 .banner-wrapper {
@@ -35,10 +36,12 @@ body.dark .fade-overlay {
 .arrow {
     position: absolute;
     top: 7.5%;
+    /* 1/4th from the top */
     background: none;
     border: none;
     color: white;
     font-size: 50px;
+    /* Arrow size */
     cursor: pointer;
     z-index: 10;
 }
@@ -55,39 +58,49 @@ body.dark .fade-overlay {
     color: rgba(255, 255, 255, 0.8);
 }
 
+/* Overlay ProductGrid at 60% of the banner height */
 .product-grid-overlay {
     position: absolute;
     top: 20%;
+    /* Start from 60% of banner height */
     left: 0;
     width: 100%;
     z-index: 10;
+    /* Ensure it's above the banner */
 }
 
+/* Medium Screens (Max Width 1024px) */
 @media (max-width: 1024px) {
     .product-grid-overlay {
         top: 15%;
+        /* Move higher on smaller screens */
     }
 
     .arrow {
         top: 5%;
+        /* Adjust arrow higher */
     }
 }
 
+/* Tablet Screens (Max Width 768px) */
 @media (max-width: 877px) {
     .product-grid-overlay {
         top: 15%;
+        /* Further move up on smaller screens */
     }
 
     .banner-image {
         width: 125%;
+        /* Increase width to zoom in and cut sides */
         margin-left: -75px;
         height: auto;
         display: block;
         object-fit: cover;
+        /* Ensures the image fills the container without stretching */
     }
 
     .banner-container {
-        min-height: 600px;
+        min-height: 850px;
     }
 
     .arrow {
@@ -98,13 +111,16 @@ body.dark .fade-overlay {
 @media (max-width: 468px) {
     .product-grid-overlay {
         top: 10%;
+        /* Further move up on smaller screens */
     }
 
     .banner-image {
         width: 175%;
+        /* Increase width to zoom in and cut sides */
         margin-left: -150px;
         height: auto;
         display: block;
         object-fit: cover;
+        /* Ensures the image fills the container without stretching */
     }
 }

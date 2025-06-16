@@ -1,25 +1,28 @@
-.navbar,
-.header {
+/* NavBar.css */
+.navbar, .header{
   width: 100%;
   background-color: #131921;
   color: white;
   font-family: Arial, sans-serif;
 }
 
+/* Navbar Top */
 .navbar-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 5px 20px;
+  justify-content: space-between;  
+  padding: 5px 20px; /* Match bottom navbar padding */
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; 
 }
 
+/* Logo */
 .nav-logo img {
   padding-top: 5px;
   height: 40px;
 }
 
+/* Location */
 .nav-location {
   margin-left: 10px;
   display: flex;
@@ -44,9 +47,10 @@
 .nav-text-bold {
   font-size: 14px;
   font-weight: bold;
-  white-space: nowrap;
+  white-space: nowrap; /* Ensures text never wraps to the next line */
 }
 
+/* Search Bar */
 .nav-search {
   display: flex;
   flex-grow: 1;
@@ -57,6 +61,15 @@
   align-items: center;
   margin: 0 10px;
   transition: max-width 0.3s ease-in-out;
+}
+
+.nav-search-category {
+  background: #e6e6e6;
+  border: none;
+  padding: 13px;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+  text-align: center;
 }
 
 .nav-search-input {
@@ -74,6 +87,7 @@
   cursor: pointer;
 }
 
+/* Language Selector */
 .nav-language {
   display: flex;
   align-items: center;
@@ -90,19 +104,20 @@
   font-size: 14px;
 }
 
-.nav-account,
-.nav-orders {
+/* Account, Orders & Cart */
+.nav-account, .nav-orders {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 5px;
-  white-space: nowrap;
+  white-space: nowrap; /* Prevents line breaks */
 }
 
+/* Cart */
 .no-link-style {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherit the text color from the parent element */
 }
 
 .nav-cart {
@@ -123,206 +138,210 @@
   font-weight: bold;
 }
 
+/* Bottom Navbar */
 .navbar-bottom {
   display: flex;
   background: #232f3e;
   padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
-  gap: 22px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  gap: 22px; /* Adds space between items */
+  flex-wrap: nowrap; /* Prevents items from wrapping */
+  overflow-x: auto; /* Makes the navbar horizontally scrollable if content overflows */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
 }
 
 .nav-item {
-  flex-shrink: 0;
+  flex-shrink: 0; /* Prevents items from shrinking */
   font-size: 14px;
   cursor: pointer;
 }
 
 .navbar-top,
 .navbar-bottom {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .navbar-bottom::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hides the scrollbar */
 }
 
+/* Responsive Adjustments */
 @media (min-width: 1601px) {
   .nav-search {
-    max-width: 12000px;
+      max-width: 12000px;  /* Search box increases to 1200px */
   }
 }
 
 @media (max-width: 1440px) {
   .nav-search {
-    max-width: 800px;
+      max-width: 800px;
   }
 }
 
 @media (max-width: 1200px) {
   .nav-search {
-    max-width: 700px;
+      max-width: 700px;
   }
 }
 
 @media (max-width: 1024px) {
-  .nav-search input {
+  .nav-search input{
     width: 100%;
-  }
+}
 }
 
 @media (max-width: 900px) {
-  .nav-search input {
-    width: 50%;
+  .nav-search input{
+      width: 50%;
   }
-
-  .nav-account,
-  .nav-orders {
-    font-size: 12px;
+  .nav-account, .nav-orders {
+      font-size: 12px; /* Reduces size slightly to fit */
   }
 }
 
 @media (max-width: 768px) {
   .nav-search {
-    max-width: 400px;
+      max-width: 400px;
   }
-
   .nav-language {
-    display: none;
+      display: none;
   }
-
-  .nav-account,
-  .nav-orders {
-    font-size: 11px;
+  .nav-account, .nav-orders {
+      font-size: 11px;
   }
 }
 
 @media (max-width: 600px) {
   .nav-search {
-    max-width: 300px;
+      max-width: 300px;
   }
-
   .navbar-top {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
-
   .nav-location {
-    display: none;
+      display: none;
   }
-
-  .nav-account,
-  .nav-orders {
-    font-size: 10px;
+  .nav-account, .nav-orders {
+      font-size: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .nav-search {
-    max-width: 250px;
+      max-width: 250px;
   }
-
   .nav-cart {
-    margin-right: 5px;
+      margin-right: 5px;
   }
 }
 
-.hamburger-icon {
+.hamburger-icon{
   margin-top: -5px;
   padding-right: 1px;
 }
 
 @media (max-width: 1000px) {
-
   .nav-orders,
   .nav-cart {
-    display: none;
+      display: none;
   }
 }
 
 @media (max-width: 877px) {
-
+  /* Common styling for all 4 navbars */
   .navbar-top,
   .nav-search-container,
   .navbar-bottom,
   .nav-location-bar {
-    background-color: #232f3e;
-    color: white;
-    width: 100%;
+      background-color: #232f3e; /* Amazon blue */
+      color: white;
+      width: 100%;
   }
 
+  /* 1st Navbar: Top section (Hamburger, Logo, Hi {name}, Cart) */
   .navbar-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* padding: 10px 15px; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* padding: 10px 15px; */
   }
 
   .nav-left {
-    display: flex;
-    align-items: center;
+      display: flex;
+      align-items: center;
   }
 
   .nav-right {
-    display: flex;
-    align-items: center;
+      display: flex;
+      align-items: center;
   }
 
   .nav-logo {
-    display: flex;
-    align-items: center;
+      display: flex;
+      align-items: center;
   }
 
   .hamburger-icon {
-    font-size: 22px;
-    margin-right: 10px;
-    cursor: pointer;
+      font-size: 22px;
+      margin-right: 10px;
+      cursor: pointer;
   }
 
   .nav-user {
-    font-size: 14px;
-    font-weight: bold;
-    margin-right: 15px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 15px; /* Space between Hi {name} and Cart */
   }
 
   .nav-cart {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
   }
 
   .cart-text {
-    margin-left: 5px;
-    font-weight: bold;
+      margin-left: 5px;
+      font-weight: bold;
   }
 
+  /* 2nd Navbar: Search Bar */
   .nav-search-container {
     display: flex;
     justify-content: center;
     padding: 0;
-    background-color: #232f3e;
-  }
+    background-color: #232f3e; /* Amazon blue */
+}
 
-  .nav-search {
+.nav-search {
     display: flex;
     max-width: 1000px;
-    background-color: white;
-    border-radius: 8px;
+    background-color: white; /* Search box is white */
+    border-radius: 8px; /* Rounded corners */
     overflow: hidden;
-    align-items: center;
-  }
+    align-items: center; /* Ensures proper alignment */
+}
 
-  .nav-search-input {
+.nav-search-category {
+    height: 100%; /* Match the height of the search box */
+    padding: 0 10px;
+    border: none;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-input {
     flex: 1;
     padding: 10px;
     border: none;
     outline: none;
     font-size: 14px;
-  }
+}
 
-  .nav-search-btn {
+.nav-search-btn {
     background-color: #febd69;
     border: none;
     padding: 10px 15px;
@@ -330,25 +349,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-  }
+    height: 100%; /* Ensures the button matches the search box height */
+}
 
+  /* 3rd Navbar: Bottom navigation */
   .navbar-bottom {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px;
   }
 
+  /* 4th Navbar: Delivery location */
   .nav-location-bar {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    font-size: 14px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 14px;
   }
 
   .location-icon {
-    margin-right: 5px;
+      margin-right: 5px;
   }
 }
+
